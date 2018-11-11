@@ -12,8 +12,8 @@
 
       <section class="jumbotron text-center">
         <div class="container">
-          <h1 class="jumbotron-heading">Album</h1>
-          <p class="lead text-muted">Take a look at my album</p>
+          <h1 class="jumbotron-heading"><?php echo $album["name"]; ?></h1>
+          <p class="lead text-muted">Take a look at my photographs</p>
           <p>
             <a href="#" class="btn btn-primary my-2">Main call to action</a>
             <a href="#" class="btn btn-secondary my-2">Secondary action</a>
@@ -25,20 +25,19 @@
         <div class="container">
 
           <div class="row">
-            <?php foreach ($albums as $album ){ ?>
+            <?php foreach ($photos as $photo ){ ?>
             <div class="col-md-4">
               <div class="card mb-4 shadow-sm">
-                <img class="card-img-top" data-src="<?php echo $one_photo["photo_url"]; ?>" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="<?php echo $one_photo["photo_url"]; ?>" data-holder-rendered="true">
+                <img class="card-img-top" data-src="<?php echo $photo["photo_url"]; ?>" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="<?php echo $photo["photo_url"]; ?>" data-holder-rendered="true">
                 <div class="card-body">
-                  <p class="card-text"><?php echo $album["name"]; ?></p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <form action="https://keops-web1.herokuapp.com/User/detail_album/<?php echo $album["album_id"]; ?>">
-                        <input type="submit" value="detail" />
+                      <form action="https://keops-web1.herokuapp.com/User/delete_photo/<?php echo $photo["photo_id"]; ?>">
+                        <input type="submit" value="Delete" />
                       </form>
         
                     </div>
-                    <small class="text-muted">Created at: <?php echo $album["date"]; ?></small>
+                    <small class="text-muted">Added at: <?php echo $photo["photo_date"]; ?></small>
                   </div>
                 </div>
               </div>
