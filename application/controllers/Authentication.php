@@ -1,6 +1,8 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Authentication extends CI_Controller {
+
+  
   public function index(){
     
 
@@ -10,8 +12,8 @@ class Authentication extends CI_Controller {
 
   public function log(){
     $this->load->model('User_model');
-   if($this->input->post()){
 
+   if($this->input->post()){
 
     $data["users"] = $this->User_model->get_all_users();
 
