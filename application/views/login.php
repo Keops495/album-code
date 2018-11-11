@@ -14,7 +14,7 @@
           <h2>Admin Login</h2>
           <p>Please enter your email and password</p>
         </div>
-        <form action="" method='post' enctype="multipart/form-data">
+        <form action="" method='post'>
           <div class="form-group">
             <input type="email" class="form-control" id="inputEmail" placeholder="Email Address">
           </div>
