@@ -2,16 +2,17 @@
 
 class Authentication extends CI_Controller {
   public function index(){
+    $this->load->model('User_model');
     
     $this->load->view('login');
     
   }
 
   public function log(){
-    
+    $this->load->model('User_model');
    if($this->input->post()){
 
-    $this->load->model('User_model');
+    
 
 
     $data["users"] = $this->User_model->get_all_users();
