@@ -14,15 +14,11 @@
           <h2>Admin Login</h2>
           <p>Please enter your email and password</p>
         </div>
-        <form action="" method='post'>
-          <div class="form-group">
-            <input type="email" class="form-control" id="inputEmail" placeholder="Email Address">
-          </div>
-          <div class="form-group">
-            <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-          </div>
-          <input type="Submit" class= "btn btn-primary">
-        </form>
+        <form action="https://keops-web1.herokuapp.com/Authentication/log" method='POST' enctype="multipart/form-data" style="text-align: left;">
+                                              <input type="text" name="Username" class="form-control" placeholder="Adet Sayısını Giriniz" aria-describedby="basic-addon1" required >
+                                              <input type="password" name="Password" class="form-control" placeholder="Adet Sayısını Giriniz" aria-describedby="basic-addon1" required >   
+                                            <input type="submit" name="Sepet" value="Sepete Ekle" class="button" style="padding: 3px 6px; font-size: 30px;">
+                                            </form>
       </div>
     </div>
   </div>
