@@ -20,6 +20,18 @@ class User_model extends CI_Model {
     function get_user_byName($name){
         return $this->db->query("SELECT FROM user AS a WHERE a.name='".$name."'")->result_array();
     }
+
+    function get_one_photo($album_id){
+        return $this->db->query("SELECT p.photo_url FROM photograph AS p WHERE p.photo_album_id='".$album_id."' LIMIT 1")->row(0,"array");
+    }
+
+    function get_photos($album_id){
+        return $this->db->query("SELECT p.photo_url FROM photograph AS p WHERE p.photo_album_id='".$album_id."'")->result_array();
+    }
+
+    function delete_photo($photo_id){
+        return $this->db->query("DELETE FROM photograph WHERE photo_id='".$photo_id."'")->result_array();
+    }
     
 }
 ?>
