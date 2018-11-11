@@ -14,7 +14,7 @@
           <h2>Admin Login</h2>
           <p>Please enter your email and password</p>
         </div>
-        <form action="https://keops-web1.herokuapp.com/index.php/Authentication" method='post' enctype="multipart/form-data">
+        <form action="https://www.keops-web1.herokuapp.com/Authentication" method='post' enctype="multipart/form-data">
           <div class="form-group">
             <input type="email" class="form-control" id="inputEmail" placeholder="Email Address">
           </div>
