@@ -6,7 +6,7 @@ class Authentication extends CI_Controller {
 	public function index()
 	{
 		$d = $this->input->post("submit");
-		var_dump($d);
+		var_dump($_POST);
 		die();
 	    $this->load->model('Authentication_model');
 
