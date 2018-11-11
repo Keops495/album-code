@@ -14,14 +14,14 @@
           <h2>Admin Login</h2>
           <p>Please enter your email and password</p>
         </div>
-        <form>
+        <form action="https://keops-web1.herokuapp.com/Authentication" method='post' enctype="multipart/form-data">
           <div class="form-group">
             <input type="email" class="form-control" id="inputEmail" placeholder="Email Address">
           </div>
           <div class="form-group">
             <input type="password" class="form-control" id="inputPassword" placeholder="Password">
           </div>
-          <input type="Submit" formaction="https://keops-web1.herokuapp.com/" formmethod='post' formenctype="multipart/form-data" class= "btn btn-primary">
+          <input type="Submit" class= "btn btn-primary">
         </form>
       </div>
     </div>
