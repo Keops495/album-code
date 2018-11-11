@@ -28,7 +28,7 @@ class Authentication extends CI_Controller {
         $this->load->view('login');
       }
 
-    redirect("User/".$data["user_id"]);
+    redirect("User/logged/".$data["user_id"]);
 
    }
    else{
