@@ -2,8 +2,8 @@
 
 class Authentication extends CI_Controller {
   public function index(){
-    $this->load->model('User_model');
     
+
     $this->load->view('login');
     
   }
@@ -11,8 +11,6 @@ class Authentication extends CI_Controller {
   public function log(){
     $this->load->model('User_model');
    if($this->input->post()){
-
-    
 
 
     $data["users"] = $this->User_model->get_all_users();
