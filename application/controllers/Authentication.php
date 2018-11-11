@@ -14,7 +14,7 @@ class Authentication extends CI_Controller {
     $this->load->model('User_model');
 
 
-    $data["users"] = $this->User_model->get_users();
+    $data["users"] = $this->User_model->get_all_users();
 
     foreach ($data["users"] as $user) {
       if($this->input->post()["Username"]==$user["user_name"] && $this->input->post()["Password"]==$user["password"] ){
