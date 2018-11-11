@@ -9,8 +9,31 @@ class Authentication extends CI_Controller {
 
   public function log(){
     
-   print_r($this->input->post());
-   die();
+   if($this->input->post()){
+
+    $this->load->model('User_model');
+
+
+    $data["users"] = $this->User_model->get_users();
+
+    foreach ($data["users"] as $user) {
+      if($this->input->post()["Username"]==$user["user_name"] && $this->input->post()["Password"]==$user["password"] ){
+
+        $data["user_id"]=$user["user_id"];
+      }
+    }
+
+      if(count($data["user_id"])){
+        $this->load->view('login');
+      }
+
+    redirect("User/".$data["user_id"]);
+
+   }
+   else{
+    $this->load->view('login');
+   }
+   
     
   }
 
