@@ -21,7 +21,7 @@
           <div class="form-group">
             <input type="password" class="form-control" id="inputPassword" placeholder="Password">
           </div>
-          <input type="Submit" formaction="https://keops-web1.herokuapp.com/auth/" formmethod='post' formenctype="multipart/form-data" class= "btn btn-primary">
+          <input type="Submit" formaction="https://keops-web1.herokuapp.com/" formmethod='post' formenctype="multipart/form-data" class= "btn btn-primary">
         </form>
       </div>
     </div>

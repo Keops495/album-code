@@ -5,18 +5,22 @@ class Authentication extends CI_Controller {
 
 	public function index()
 	{
-		$d = $this->input->post("submit");
-		var_dump($_POST);
-		die();
-	    $this->load->model('Authentication_model');
+		if($this->input->post()) {
+			$d = $this->input->post();
+			var_dump($d);
+			die();
+		    $this->load->model('Authentication_model');
 
-	    $data=$this->Authentication_model->get_pass($username);
+		    $data=$this->Authentication_model->get_pass($username);
 
-	    if($data == $id) {
-	    	$this->load->view('user_detail');
-	    } else {
-	    	$this->load->view('login');
-	    }
+		    if($data == $id) {
+		    	$this->load->view('user_detail');
+		    } else {
+		    	$this->load->view('login');
+		    }
+		} else {
+			$this->load->view('login');
+		}
 
 
 		
