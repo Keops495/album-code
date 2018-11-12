@@ -22,7 +22,7 @@ class Authentication extends CI_Controller {
       if($this->input->post()["Username"]==$user["user_name"] && $this->input->post()["Password"]==$user["password"] ){
 
         $data["user_id"]=$user["user_id"];
-        $v = $this->Authentication_model->get_data($user['username']);
+        $v = $this->Authentication_model->get_data($user['user_name']);
         var_dump($v);die();
         if($v['n_times'] != 0) {
            $x = $this->Authentication_model->get_album($data["user_id"]);
