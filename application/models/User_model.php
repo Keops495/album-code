@@ -26,7 +26,7 @@ class User_model extends CI_Model {
     }
 
     function get_photos($album_id){
-        return $this->db->query("SELECT p.photo_url FROM photograph AS p WHERE p.photo_album_id='".$album_id."'")->result_array();
+        return $this->db->query("SELECT p.* FROM photograph AS p WHERE p.photo_album_id='".$album_id."'")->result_array();
     }
 
     function delete_photo($photo_id){
