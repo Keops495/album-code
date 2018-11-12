@@ -21,8 +21,8 @@
         <div class="container">
 
           <div class="row">
-            <form action="https://keops-web1.herokuapp.com/User/create_album/<?php echo $user_id; ?>" method='POST' enctype="multipart/form-data" style="text-align: center;">
-              <input type="text" name="Name" class="form-control" placeholder="Enter album name" aria-describedby="basic-addon1" required style="margin-left:50%;" >   
+            <form action="https://keops-web1.herokuapp.com/User/create_album/<?php echo $user_id; ?>" method='POST' enctype="multipart/form-data" style="text-align: center; margin-left: 42%;">
+              <input type="text" name="Name" class="form-control" placeholder="Enter album name" aria-describedby="basic-addon1" required style="margin-left:25%;" >   
               <input type="submit" name="Sepet" value="Add" class="button" style="padding: 3px 6px; font-size: 15px; margin-left:50%; ">
           </form>
           </div>
