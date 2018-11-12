@@ -56,5 +56,8 @@ class User_model extends CI_Model {
         return $this->db->query("INSERT INTO keyword SET key=".$this->db->escape($data['Key']).", keyword_photo_id='".$photo_id."'");
         
     }
+     function get_key($photo_id){
+        return $this->db->query("SELECT a.key FROM keyword AS a WHERE a.keyword_photo_id='".$photo_id."' ")->row(0,"array");
+    }
 }
 ?>
