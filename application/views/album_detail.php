@@ -30,7 +30,7 @@
               <div class="card mb-4 shadow-sm">
                 <img class="card-img-top" data-src="<?php echo $photo["photo_url"]; ?>" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="<?php echo $photo["photo_url"]; ?>" data-holder-rendered="true">
                 <div class="card-body">
-                  <p class="card-text"><?php echo $photo["key"]; ?></p>
+                  <p class="card-text"><?php echo $photo["key"]["key"]; ?></p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
                       <form action="https://keops-web1.herokuapp.com/User/delete_photo/<?php echo $photo["photo_id"]; ?>">
