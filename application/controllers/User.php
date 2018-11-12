@@ -36,7 +36,7 @@ class User extends CI_Controller {
 
 	    for ($i=0; $i <count($data["photos"]) ; $i++) {
 
-	    	$data["key"][$i]=$this->User_model->get_key($data["photos"][$i]["photo_id"]);
+	    	$data["photos"][$i]["key"]=$this->User_model->get_key($data["photos"][$i]["photo_id"]);
 	    }
 
 	    $data["album_id"]=$album_id;
