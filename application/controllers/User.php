@@ -57,7 +57,9 @@ class User extends CI_Controller {
 
 	    $data["user_id"]=$user_id;
 
-		$this->load->view('user_detail',$data);
+		redirect("User/logged/".$data["user_id"]);
+
+		
 	}
 
 
