@@ -38,6 +38,8 @@ class User_model extends CI_Model {
     }
     function add_more_album($user_id,$data){
         
+        return $this->db->query("INSERT INTO album SET name=".$this->db->escape($data['Name']).", album_user_id='".$user_id."', album_date=NOW()");
+        
     }
 }
 ?>
