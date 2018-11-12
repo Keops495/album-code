@@ -7,7 +7,6 @@
   </head>
   <body id="LoginForm">
   <div class="container">
-    <h1 class="form-heading">login Form</h1>
     <div class="login-form">
       <div class="main-div">
         <div class="panel">
@@ -17,7 +16,7 @@
         <form action="https://keops-web1.herokuapp.com/Authentication/log" method='POST' enctype="multipart/form-data" style="text-align: center;">
           <input type="text" name="Username" class="form-control" placeholder="Enter username" aria-describedby="basic-addon1" required >
           <input type="password" name="Password" class="form-control" placeholder="Enter password" aria-describedby="basic-addon1" required >   
-          <input type="submit" name="Sepet" value="Login" class="button" style="padding: 3px 6px; font-size: 30px;">
+          <input type="submit" name="Sepet" value="Login" class="button" style="padding: 3px 6px; font-size: 200px;">
         </form>
       </div>
     </div>
