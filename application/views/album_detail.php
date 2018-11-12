@@ -17,6 +17,7 @@
           <p class="lead text-muted">Take a look at my photographs</p>
           <p>
              <a href="https://keops-web1.herokuapp.com/User/add_photo/<?php echo $album_id; ?>" class="btn btn-primary my-2">Add Photograph</a>
+             <a href="https://keops-web1.herokuapp.com/User/detail_album/<?php echo $album_id; ?>" class="btn btn-secondary my-2">Show All Photographs</a>
           </p>
         </div>
       </section>

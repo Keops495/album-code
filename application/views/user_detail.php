@@ -17,7 +17,6 @@
           <p class="lead text-muted">Take a look at my album</p>
           <p>
             <a href="https://keops-web1.herokuapp.com/User/add_album/<?php echo $user_id; ?>" class="btn btn-primary my-2">Add Album</a>
-            <a href="#" class="btn btn-secondary my-2">Secondary action</a>
           </p>
         </div>
       </section>
