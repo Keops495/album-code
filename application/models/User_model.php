@@ -33,5 +33,8 @@ class User_model extends CI_Model {
         return $this->db->query("DELETE FROM photograph WHERE photo_id='".$photo_id."'")->result_array();
     }
     
+    function get_album($album_id){
+        return $this->db->query("SELECT a.* FROM album AS a WHERE a.album_id='".$album_id."' ")->row(0,"array");
+    }
 }
 ?>
