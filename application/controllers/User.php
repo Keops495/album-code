@@ -10,7 +10,12 @@ class User extends CI_Controller {
 
 	    $data["albums"]=$this->User_model->get_user_album($user_id);
 
-	    $data["one_photo"]==$this->User_model->get_one_photo($data["albums"]["album_id"]);
+	    for ($i=0; $i <count($data["albums"]); $i++) { 
+
+	    	$data["albums"][$i]["one_photo"]=$this->User_model->get_one_photo($data["albums"][$i]["album_id"]);
+	    }
+
+	    
 
 		$this->load->view('user_detail',$data);
 	}
