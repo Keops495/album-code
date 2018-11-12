@@ -15,6 +15,12 @@ class User extends CI_Controller {
 	    	$data["albums"][$i]["one_photo"]=$this->User_model->get_one_photo($data["albums"][$i]["album_id"]);
 	    }
 
+	    for ($i=0; $i < count($data["albums"]) ; $i++) { 
+	    	if($data["albums"][$i]["one_photo"]["photo_url"]==""){
+	    		$data["albums"][$i]["one_photo"]["photo_url"]="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/1024px-No_image_available.svg.png";
+	    	}
+	    }
+
 	    $data["user_id"]=$user_id;
 
 		$this->load->view('user_detail',$data);
@@ -59,7 +65,7 @@ class User extends CI_Controller {
 
 		redirect("User/logged/".$data["user_id"]);
 
-		
+
 	}
 
 
