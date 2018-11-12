@@ -27,6 +27,7 @@
 
           <div class="row">
             <?php foreach ($albums as $album ){ ?>
+              <?php print_r($album); die(); ?>
             <div class="col-md-4">
               <div class="card mb-4 shadow-sm">
                 <img class="card-img-top" data-src="<?php echo $album["one_photo"]["photo_url"]; ?>" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="<?php echo $one_photo["photo_url"]; ?>" data-holder-rendered="true">
@@ -39,7 +40,7 @@
                       </form>
         
                     </div>
-                    <small class="text-muted">Created at: <?php echo $album["date"]; ?></small>
+                    <small class="text-muted">Created at: <?php echo $album["album_date"]; ?></small>
                   </div>
                 </div>
               </div>
