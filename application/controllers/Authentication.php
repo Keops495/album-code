@@ -23,14 +23,13 @@ class Authentication extends CI_Controller {
 
         $data["user_id"]=$user["user_id"];
         $v = $this->Authentication_model->get_data($user['username']);
-        var_dump($v);
-        if($v != 0) {
+        if($v['n_times'] != 0) {
            $x = $this->Authentication_model->get_album($data["user_id"]);
            foreach ($x as $key) {
               $z = $this->Authentication_model->get_photo($key['photo_album_id']);
               foreach ($z as $e) {
                   var_dump(date_diff($e['photo_date'],date("YYYY/mm/dd")));die();
-                  if(date_diff($e['photo_date'],date("YYYY/mm/dd")) >= $x) {
+                  if(date_diff($e['photo_date'],date("YYYY/mm/dd")) >= $v['n_times']) {
                     $this->User_model->delete_photo($e['photo_id']);
                   }
                 }  
