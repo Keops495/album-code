@@ -15,7 +15,7 @@ class User extends CI_Controller {
 	    	$data["albums"][$i]["one_photo"]=$this->User_model->get_one_photo($data["albums"][$i]["album_id"]);
 	    }
 
-	    
+	    $data["user_id"]=$user_id;
 
 		$this->load->view('user_detail',$data);
 	}
@@ -39,6 +39,30 @@ class User extends CI_Controller {
 
 		$this->load->view('album_detail',$data);
 	}
+
+	public function add_album($user_id)
+	{
+
+	    $data["user_id"]=$user_id;
+
+		$this->load->view('add_album',$data);
+	}
+
+	public function create_album($user_id)
+	{
+
+		print_r($this->input->post());
+		die();
+
+	    $this->load->model('User_model');
+
+	    $this->User_model->add_more_album($user_id,$this->input->post());
+
+	    $data["user_id"]=$user_id;
+
+		$this->load->view('user_detail',$data);
+	}
+
 
 
 }
