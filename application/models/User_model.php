@@ -59,5 +59,9 @@ class User_model extends CI_Model {
      function get_key($photo_id){
         return $this->db->query("SELECT a.key FROM keyword AS a WHERE a.keyword_photo_id='".$photo_id."' LIMIT 1")->row(0,"array");
     }
+
+    function get_photos_with_key($album_id,$data){
+        return $this->db->query("SELECT p.* FROM photograph AS p, keyword AS k WHERE p.photo_album_id='".$album_id."' AND k.keyword_photo_id=p.photo_id AND k.key='".$data["Key"]."' ")->result_array();
+    }
 }
 ?>

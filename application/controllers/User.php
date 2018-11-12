@@ -104,6 +104,31 @@ class User extends CI_Controller {
 
 	}
 
+	public function search_key($album_id)
+	{
+
+	    $this->load->model('User_model');
+
+	    $data["album"]=$this->User_model->get_album($album_id);
+
+	    $data["photos"]=$this->User_model->get_photos_with_key($album_id,$this->input->post());
+
+	    $data["key"]=$this->input->post()["Key"];
+
+	    for ($i=0; $i <count($data["photos"]) ; $i++) {
+
+	    	$data["photos"][$i]["key"]=$this->User_model->get_key($data["photos"][$i]["photo_id"]);
+	    }
+
+	    $data["album_id"]=$album_id;
+
+	    $data["user_id"]=$data["album"]["album_user_id"];
+
+		$this->load->view('album_detail',$data);
+
+
+	}
+
 
 
 }

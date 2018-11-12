@@ -16,7 +16,6 @@
           <h1 class="jumbotron-heading">Add Photograph</h1>
         </div>
       </section>
-
       <div class="album py-5 bg-light" style="text-align: center;">
         <div class="container">
 

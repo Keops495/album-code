@@ -20,7 +20,12 @@
           </p>
         </div>
       </section>
-
+       <div class="row">
+            <form action="https://keops-web1.herokuapp.com/User/search_key/<?php echo $album_id; ?>" method='POST' enctype="multipart/form-data" style="text-align: center;">
+              <input type="text" name="Key" class="form-control" placeholder="Enter key" aria-describedby="basic-addon1" required style="margin-left: 50%;">   
+              <input type="submit" name="Sepet" value="Search Key" class="button" style="padding: 3px 6px; font-size: 15px; margin-left: 50%;">
+          </form>
+        </div>
       <div class="album py-5 bg-light">
         <div class="container">
 
