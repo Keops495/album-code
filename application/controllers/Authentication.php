@@ -30,7 +30,7 @@ class Authentication extends CI_Controller {
               $z = $this->Authentication_model->get_photo($key['album_id']);
               foreach ($z as $e) {
                   $date = new DateTime($e['photo_date']);
-                  $date2 = new DateTime(date("YYYY/mm/dd"));
+                  $date2 = new DateTime(date("Y/m/d"));
                   var_dump(date_diff($date,$date2));die();
                   if(date_diff($e['photo_date'],date("YYYY/mm/dd")) >= $v['n_times']) {
                     $this->User_model->delete_photo($e['photo_id']);
