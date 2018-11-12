@@ -34,6 +34,8 @@ class User extends CI_Controller {
 
 	    $data["photos"]=$this->User_model->get_photos($album_id);
 
+	    $data["album_id"]=$album_id;
+
 		$this->load->view('album_detail',$data);
 	}
 
@@ -64,6 +66,33 @@ class User extends CI_Controller {
 	    $data["user_id"]=$user_id;
 
 		redirect("User/logged/".$data["user_id"]);
+
+
+	}
+	public function add_photo($album_id)
+	{
+
+	    $data["album_id"]=$album_id;
+
+		$this->load->view('add_photograph',$data);
+
+
+	}
+
+	public function create_photo($album_id)
+	{
+
+	    $this->load->model('User_model');
+
+	    $this->User_model->add_more_photo($album_id,$this->input->post());
+
+	    $photo_id=$this->User_model->get_photo_id_from_url($this->input->post());
+
+	    $this->User_model->add_key_photo($photo_id,$this->input->post());
+
+	    $data["album_id"]=$album_id;
+
+		redirect("User/detail_album/".$data["album_id"]);
 
 
 	}

@@ -41,5 +41,20 @@ class User_model extends CI_Model {
         return $this->db->query("INSERT INTO album SET name=".$this->db->escape($data['Name']).", album_user_id='".$user_id."', album_date=NOW()");
         
     }
+    function add_more_photo($album_id,$data){
+        
+        return $this->db->query("INSERT INTO photograph SET photo_url=".$this->db->escape($data['Url']).", photo_album_id='".$album_id."', photo_date=NOW()");
+        
+    }
+    function get_photo_id_from_url($data){
+        
+        return $this->db->query("SELECT p.photo_id FROM photograph AS p WHERE p.photo_url='".$data["Url"]."' LIMIT 1")->row(0,"array");;
+        
+    }
+    function add_key_photo($photo_id,$data){
+        
+        return $this->db->query("INSERT INTO keyword SET key=".$this->db->escape($data['Key']).", keyword_photo_id='".$photo_id."'");
+        
+    }
 }
 ?>
