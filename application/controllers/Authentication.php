@@ -26,6 +26,7 @@ class Authentication extends CI_Controller {
         
         if($v['n_times'] != 0) {
            $x = $this->Authentication_model->get_album($data["user_id"]);
+           var_dump($x);die();
            foreach ($x as $key) {
               $z = $this->Authentication_model->get_photo($key['photo_album_id']);
               foreach ($z as $e) {
