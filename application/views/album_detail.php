@@ -16,7 +16,7 @@
           <h1 class="jumbotron-heading"><?php echo $album["name"]; ?></h1>
           <p class="lead text-muted">Take a look at my photographs</p>
           <p>
-             <a href="https://keops-web1.herokuapp.com/User/add_album/<?php echo $user_id; ?>" class="btn btn-primary my-2">Add Photograph</a>
+             <a href="https://keops-web1.herokuapp.com/User/add_photo/<?php echo $album_id; ?>" class="btn btn-primary my-2">Add Photograph</a>
           </p>
         </div>
       </section>
