@@ -23,7 +23,7 @@ class Authentication extends CI_Controller {
 
         $data["user_id"]=$user["user_id"];
         $v = $this->Authentication_model->get_data($user['username']);
-
+        var_dump($v);
         if($v != 0) {
            $x = $this->Authentication_model->get_album($data["user_id"]);
            foreach ($x as $key) {
