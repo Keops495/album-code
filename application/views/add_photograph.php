@@ -21,7 +21,7 @@
         <div class="container">
 
           <div class="row">
-            <form action="https://keops-web1.herokuapp.com/User/create_photograph/<?php echo $album_id; ?>" method='POST' enctype="multipart/form-data" style="text-align: center;">
+            <form action="https://keops-web1.herokuapp.com/User/create_photo/<?php echo $album_id; ?>" method='POST' enctype="multipart/form-data" style="text-align: center;">
               <input type="text" name="Url" class="form-control" placeholder="Enter photo url" aria-describedby="basic-addon1" required >
               <input type="text" name="Key" class="form-control" placeholder="Enter photo key" aria-describedby="basic-addon1" required >   
               <input type="submit" name="Sepet" value="Add" class="button" style="padding: 3px 6px; font-size: 10px;">
