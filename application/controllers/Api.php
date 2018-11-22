@@ -4,7 +4,7 @@ class Api extends CI_Controller {
 
   public function users(){
     $this->load->model('Data_model');
-    echo json_encode($this->API->get_all_users());
+    echo json_encode($this->Data_model->get_all_users());
   }
 
 }
