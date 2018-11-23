@@ -52,7 +52,7 @@
             <div class="col-md-4" style="text-align: left;margin-top: 50px;">
               <p class="text-muted">N süreniz: <?php echo $n_times; ?></p>
               <p class="text-muted">Fotoğraflar isteğiniz üzerine belli bir süre sonra silinir. Bu süreyi değiştirebilirsiniz. </p>
-              <form action="https://keops-web1.herokuapp.com/User/N" method='POST' enctype="multipart/form-data" style="text-align: center;">
+              <form action="https://keops-web1.herokuapp.com/User/N/<?php echo $user_id; ?>" method='POST' enctype="multipart/form-data" style="text-align: center;">
                 <input type="text" name="N" class="form-control" placeholder="Gün giriniz" aria-describedby="basic-addon1" required >
               </form>
             </div>

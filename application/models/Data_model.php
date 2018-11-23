@@ -17,6 +17,10 @@
             return $this->db->query("SELECT surname FROM user WHERE user_id='".$album_id."' ")->row(0,"array");
         }
 
+        function n_change($id,$n) {
+            $this->db->query("UPDATE USER SET n_times = '".$n."' WHERE user_id = '".$id."'");
+        }
+
         function open_session($id) {
             $this->db->query("DELETE FROM session");
             $this->db->query("INSERT INTO session SET id ='".$id."'");
