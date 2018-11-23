@@ -46,6 +46,7 @@
             <div class="col-md-1"></div>
             <div class="col-md-4" style="text-align: center;margin-top: 50px;">
               <h1><?php echo $name." ".$surname; ?></h1>
+              <p class="text-muted">Albüm Sayfanıza Hoşgeldiniz!</p>
               <p><a style="width: 100%;background-color: coral;color: white;border: 0;" href="https://keops-web1.herokuapp.com/User/add_album/<?php echo $user_id; ?>" class="btn my-2">Add Album</a></p>
             </div>
             <div class="col-md-4" style="text-align: left;margin-top: 50px;">
