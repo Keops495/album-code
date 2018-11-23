@@ -95,10 +95,7 @@ class User extends CI_Controller {
 
 	    $photo_id=$this->User_model->get_photo_id_from_url($this->input->post());
 
-	    print_r($photo_id);
-	    die();
-
-	    $this->User_model->add_key_photo($photo_id,$this->input->post());
+	    $this->User_model->add_key_photo($photo_id["photo_id"],$this->input->post());
 
 	    $data["album_id"]=$album_id;
 
