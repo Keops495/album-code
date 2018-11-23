@@ -12,6 +12,7 @@ class Authentication extends CI_Controller {
 
   public function log(){
     $this->load->model('User_model');
+    $this->load->model('Authentication_model');
 
    if($this->input->post()){
 
@@ -21,6 +22,22 @@ class Authentication extends CI_Controller {
       if($this->input->post()["Username"]==$user["user_name"] && $this->input->post()["Password"]==$user["password"] ){
 
         $data["user_id"]=$user["user_id"];
+        $v = $this->Authentication_model->get_data($user['user_name']);
+        
+        if($v['n_times'] != 0) {
+           $x = $this->Authentication_model->get_album($data["user_id"]);
+           foreach ($x as $key) {
+              $z = $this->Authentication_model->get_photo($key['album_id']);
+              foreach ($z as $e) {
+                  $date = new DateTime($e['photo_date']);
+                  $date2 = new DateTime(date("Y/m/d"));
+                  $temp = date_diff($date,$date2);
+                  if($temp->y>0 OR $temp->m>0 OR $temp->d >= $v['n_times']) {
+                    $this->User_model->delete_photo($e['photo_id']);
+                  }
+                }  
+           }
+        }
       }
     }
 
