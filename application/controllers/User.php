@@ -48,14 +48,17 @@ class User extends CI_Controller {
 
 	public function delete_photo($photo_id)
 	{
-	    $this->load->model('User_model');
 
-	    $this->User_model->delete_photo($photo_id);
+	    $this->load->model('User_model');
 
 	    $album_id=$this->User_model->get_album_id_with_photo($photo_id);
 
 	    print_r($album_id);
 	    die();
+
+	    $this->User_model->delete_photo($photo_id);
+
+	    
 
 		redirect("User/detail_album/".$data["album_id"]);
 	}
