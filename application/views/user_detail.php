@@ -7,6 +7,8 @@
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 <body>
+
+    <style>a{color: black;text-decoration: none;}a:hover{text-decoration: none;color: black;}</style>
     <header>
       <nav class="navbar navbar-expand navbar-dark bg-dark">
       <a class="navbar-brand" href="#">PhotoAlbum</a>
@@ -53,17 +55,9 @@
             <div class="col-md-4">
               <a href="https://keops-web1.herokuapp.com/User/detail_album/<?php echo $album["album_id"]; ?>"><div class="card mb-4 shadow-sm">
                 <img class="card-img-top" data-src="<?php echo $album["one_photo"]["photo_url"]; ?>" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="<?php echo $album["one_photo"]["photo_url"]; ?>" data-holder-rendered="true">
-                <div class="card-body">
-                  <p class="card-text"><?php echo $album["name"]; ?></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <form action="https://keops-web1.herokuapp.com/User/detail_album/<?php echo $album["album_id"]; ?>">
-                        <input type="submit" value="detail" />
-                      </form>
-        
-                    </div>
-                    <small class="text-muted">Created at: <?php echo $album["album_date"]; ?></small>
-                  </div>
+                <div class="card-body" style="text-align: center;">
+                  <p class="card-text"><?php echo $album["name"]; ?></p>        
+                  <small class="text-muted">Created at: <?php echo $album["album_date"]; ?></small>
                 </div>
               </div></a>
             </div>
