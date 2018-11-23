@@ -32,7 +32,14 @@ class User extends CI_Controller {
 	}
 
 	public function signup() {
-		$this->load->view("signup");
+		$this->load->model("Data_model");
+		if ($this->input->post()) {
+			$temp = $this->input->post();
+			$this->Data_model->new_user($temp);
+			redirect("https://keops-web1.herokuapp.com/");
+		} else {
+			$this->load->view("signup");
+		}
 	}
 
 	public function detail_album($album_id)
