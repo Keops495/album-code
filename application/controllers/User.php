@@ -54,6 +54,9 @@ class User extends CI_Controller {
 
 	    $album_id=$this->User_model->get_album_id_with_photo($photo_id);
 
+	    print_r($album_id);
+	    die();
+
 	    $data["album"]=$this->User_model->get_album($album_id);
 
 	    $data["photos"]=$this->User_model->get_photos($album_id);
