@@ -88,7 +88,7 @@ class User extends CI_Controller {
 
 	public function create_photo($album_id)
 	{
-
+		print_r("hey");
 		print_r($this->input->post());
 		die();
 
