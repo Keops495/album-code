@@ -40,7 +40,7 @@
       <section class="jumbotron text-center">
         <div class="container">
           <div class="col-md-4">
-            <img src="https://banner2.kisspng.com/20180611/ttg/kisspng-question-mark-drawing-coloring-book-exclamation-ma-lampada-5b1ea14ecdb114.6803326115287340308425.jpg">
+            <img style="width: 100%;height: auto;" src="https://banner2.kisspng.com/20180611/ttg/kisspng-question-mark-drawing-coloring-book-exclamation-ma-lampada-5b1ea14ecdb114.6803326115287340308425.jpg">
           </div>
           <div class="col-md-8">
             <h1 class="jumbotron-heading"><?php echo $name." ".$surname; ?></h1>
