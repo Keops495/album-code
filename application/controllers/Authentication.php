@@ -28,7 +28,6 @@ class Authentication extends CI_Controller {
       if($this->input->post()["Username"]==$user["user_name"] && $this->input->post()["Password"]==$user["password"] ){
         $this->load->model('Data_model');
         $this->Data_model->open_session($user["user_id"]);
-        var_dump($this->Data_model->get_session());die();
         $data["user_id"]=$user["user_id"];
 
         $v = $this->Authentication_model->get_data($user['user_name']);
