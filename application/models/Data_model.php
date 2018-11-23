@@ -22,7 +22,7 @@
         }
 
         function new_user($user) {
-            $this->db->query("INSERT INTO USER SET NAME = '".$user['name']."', SURNAME = '".$user['surname']."' PASSWORD = '".$user['Password']."' Username = '".$user['Username']."'");
+            $this->db->query("INSERT INTO user SET name = '".$user['name']."', surname = '".$user['surname']."' password = '".$user['Password']."' user_name = '".$user['Username']."'");
         }
 
         function get_user_album($user_id){

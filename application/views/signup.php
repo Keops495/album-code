@@ -14,7 +14,7 @@
           <p>Please enter your info</p>
         </div>
         <form action="https://keops-web1.herokuapp.com/User/signup" method='POST' enctype="multipart/form-data" style="text-align: center;">
-          <input type="text" name="Username" class="form-control" placeholder="Enter email" aria-describedby="basic-addon1" required >
+          <input type="text" name="Username" class="form-control" placeholder="Enter Username" aria-describedby="basic-addon1" required >
           <input style="margin-top: 10px;" type="password" name="Password" class="form-control" placeholder="Enter password" aria-describedby="basic-addon1" required >
           <input style="margin-top: 10px;" type="text" name="name" class="form-control" placeholder="Enter Name" aria-describedby="basic-addon1" required >
           <input style="margin-top: 10px;" type="text" name="surname" class="form-control" placeholder="Enter Surname" aria-describedby="basic-addon1" required >   
