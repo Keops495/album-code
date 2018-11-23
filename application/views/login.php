@@ -15,10 +15,10 @@
         </div>
         <form action="https://keops-web1.herokuapp.com/Authentication/log" method='POST' enctype="multipart/form-data" style="text-align: center;">
           <input type="text" name="Username" class="form-control" placeholder="Enter username" aria-describedby="basic-addon1" required >
-          <input type="password" name="Password" class="form-control" placeholder="Enter password" aria-describedby="basic-addon1" required >   
-          <input type="submit" name="Sepet" value="Login" class="button" style="padding: 3px 6px; font-size: 20px;">
+          <input style="margin-top: 10px;" type="password" name="Password" class="form-control" placeholder="Enter password" aria-describedby="basic-addon1" required >   
+          <input type="submit" name="Sepet" value="Login" class="button" style="padding: 3px 6px; font-size: 20px;width: 100%;margin-top: 10px;background-color: coral;color: white;border: 0;">
         </form>
-        <a href="https://keops-web1.herokuapp.com/User/signup">Üye değilseniz hemen üye olun!</a>
+        <a class="text-muted" href="https://keops-web1.herokuapp.com/User/signup">Üye değilseniz hemen üye olun!</a>
       </div>
     </div>
   </div>
