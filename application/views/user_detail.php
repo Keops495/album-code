@@ -19,7 +19,7 @@
       <div class="collapse navbar-collapse" id="navbarsExample02">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="">Profil  <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="https://keops-web1.herokuapp.com/User/logged/<?php echo $user_id; ?>">Profil  <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="">Album</a>
