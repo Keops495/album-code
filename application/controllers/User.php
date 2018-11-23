@@ -4,11 +4,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class User extends CI_Controller {
 
 
-	public function logged()
+	public function logged($user_id)
 	{
 	    $this->load->model('User_model');
 	    $this->load->model('Data_model');
-	    $user_id = $this->Data_model->get_sessions();
+	    $user_idx = $this->Data_model->get_sessions();
 
 	    $data['name'] =$this->Data_model->get_name($user_id)['name'];
 	    $data['surname'] =$this->Data_model->get_surname($user_id)['surname'];

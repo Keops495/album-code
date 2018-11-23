@@ -19,10 +19,10 @@
       <div class="collapse navbar-collapse" id="navbarsExample02">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="<?php if(isset($id)) echo '//localhost/372/liste/'.$id; else echo '//localhost/372/';?>">Profil  <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="">Profil  <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="//localhost/372/Album">Album</a>
+            <a class="nav-link" href="">Album</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="https://keops-web1.herokuapp.com/Authentication/logout">Logout</a>
