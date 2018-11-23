@@ -5,7 +5,7 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="assets/login.css">
   </head>
-  <body id="LoginForm">
+  <body id="LoginForm"><style>a{color: black;text-decoration: none;}a:hover{text-decoration: none;color: black;}</style>
   <div class="container">
     <div class="login-form">
       <div class="main-div">
@@ -18,6 +18,7 @@
           <input type="password" name="Password" class="form-control" placeholder="Enter password" aria-describedby="basic-addon1" required >   
           <input type="submit" name="Sepet" value="Login" class="button" style="padding: 3px 6px; font-size: 20px;">
         </form>
+        <a href="https://keops-web1.herokuapp.com/User/signup">Üye değilseniz hemen üye olun!</a>
       </div>
     </div>
   </div>

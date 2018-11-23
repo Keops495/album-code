@@ -31,6 +31,10 @@ class User extends CI_Controller {
 		$this->load->view('user_detail',$data);
 	}
 
+	public function signup() {
+		$this->load->view("signup");
+	}
+
 	public function detail_album($album_id)
 	{
 	    $this->load->model('User_model');

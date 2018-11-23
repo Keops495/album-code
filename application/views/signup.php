@@ -13,7 +13,7 @@
           <h2>Signup</h2>
           <p>Please enter your info</p>
         </div>
-        <form action="http://localhost/372/Welcome/SignUp" method='POST' enctype="multipart/form-data" style="text-align: center;">
+        <form action="https://keops-web1.herokuapp.com/User/signup" method='POST' enctype="multipart/form-data" style="text-align: center;">
           <input type="text" name="Username" class="form-control" placeholder="Enter email" aria-describedby="basic-addon1" required >
           <input type="password" name="Password" class="form-control" placeholder="Enter password" aria-describedby="basic-addon1" required >
           <input type="text" name="name" class="form-control" placeholder="Enter Name" aria-describedby="basic-addon1" required >
