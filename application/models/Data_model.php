@@ -18,7 +18,7 @@
         }
 
         function n_change($id,$n) {
-            $this->db->query("UPDATE USER SET n_times = '".$n."' WHERE user_id = '".$id."'");
+            $this->db->query("UPDATE user SET n_times = ".$n." WHERE user_id = '".$id."'");
         }
 
         function open_session($id) {
