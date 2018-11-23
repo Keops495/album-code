@@ -64,7 +64,7 @@
                   <p class="card-text"><?php echo $photo["key"]["key"]; ?></p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <form action="https://keops-web1.herokuapp.com/User/delete_photo/<?php echo $photo["photo_id"]; ?>/<?php echo $album_id; ?>">
+                      <form action="https://keops-web1.herokuapp.com/User/delete_photo/<?php echo $photo["photo_id"]; ?>">
                         <input type="submit" value="Delete" />
                       </form>
         
