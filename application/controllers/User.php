@@ -11,7 +11,7 @@ class User extends CI_Controller {
 	    $user_idx = $this->Data_model->get_sessions();
 	    if($this->input->post()) {
 	    	$temp = $this->input->post()['search'];
-	    	$data["albums"]=$this->User_model->album_search($temp,$user_id);
+	    	$data["albums"]=$this->Data_model->album_search($temp,$user_id);
 	    } else {
 	    	$data["albums"]=$this->User_model->get_user_album($user_id);
 	    }
