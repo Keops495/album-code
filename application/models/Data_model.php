@@ -21,7 +21,7 @@
             return $this->db->query("SELECT * FROM album")->result_array();
         }
 
-        function get_all_photos() {
+        function get_all_photosa() {
             return $this->db->query("SELECT * FROM photograph")->result_array();
         }
 

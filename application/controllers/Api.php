@@ -9,7 +9,7 @@ class Api extends CI_Controller {
 
    public function photos(){
     $this->load->model('Data_model');
-    echo json_encode($this->Data_model->get_all_photos());
+    echo json_encode($this->Data_model->get_all_photosa());
   }
 
    public function likes(){
