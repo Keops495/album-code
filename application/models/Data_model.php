@@ -27,7 +27,7 @@
         }
 
         function get_session() {
-            $this->db->query("SELECT * FROM session")->row(0,"array")['id'];
+            $this->db->query("SELECT * FROM session")->row(0,"array");
         }
 
         function get_n($album_id){
