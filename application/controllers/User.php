@@ -36,6 +36,7 @@ class User extends CI_Controller {
 		if ($this->input->post()) {
 			$temp = $this->input->post();
 			$this->load->model("Data_model");
+			$this->Data_model->n_change($id,$temp['N']);
 			redirect("https://keops-web1.herokuapp.com/User/logged/".$id);
 		}
 	}
