@@ -52,6 +52,21 @@ class User extends CI_Controller {
 
 	    $this->User_model->delete_photo($photo_id);
 
+	    $this->load->model('User_model');
+
+	    $data["album"]=$this->User_model->get_album($album_id);
+
+	    $data["photos"]=$this->User_model->get_photos($album_id);
+
+	    for ($i=0; $i <count($data["photos"]) ; $i++) {
+
+	    	$data["photos"][$i]["key"]=$this->User_model->get_key($data["photos"][$i]["photo_id"]);
+	    }
+
+	    $data["album_id"]=$album_id;
+
+	    $data["user_id"]=$data["album"]["album_user_id"];
+
 		$this->load->view('album_detail',$data);
 	}
 
