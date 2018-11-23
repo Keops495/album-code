@@ -57,19 +57,6 @@ class User extends CI_Controller {
 	    print_r($album_id);
 	    die();
 
-	    $data["album"]=$this->User_model->get_album($album_id);
-
-	    $data["photos"]=$this->User_model->get_photos($album_id);
-
-	    for ($i=0; $i <count($data["photos"]) ; $i++) {
-
-	    	$data["photos"][$i]["key"]=$this->User_model->get_key($data["photos"][$i]["photo_id"]);
-	    }
-
-	    $data["album_id"]=$album_id;
-
-	    $data["user_id"]=$data["album"]["album_user_id"];
-
 		redirect("User/detail_album/".$data["album_id"]);
 	}
 
