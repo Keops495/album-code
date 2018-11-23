@@ -51,7 +51,7 @@
           <div class="row">
             <?php foreach ($albums as $album ){ ?>
             <div class="col-md-4">
-              <div class="card mb-4 shadow-sm">
+              <a href="https://keops-web1.herokuapp.com/User/detail_album/<?php echo $album["album_id"]; ?>"><div class="card mb-4 shadow-sm">
                 <img class="card-img-top" data-src="<?php echo $album["one_photo"]["photo_url"]; ?>" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="<?php echo $album["one_photo"]["photo_url"]; ?>" data-holder-rendered="true">
                 <div class="card-body">
                   <p class="card-text"><?php echo $album["name"]; ?></p>
@@ -65,7 +65,7 @@
                     <small class="text-muted">Created at: <?php echo $album["album_date"]; ?></small>
                   </div>
                 </div>
-              </div>
+              </div></a>
             </div>
             <?php } ?>
           </div>
