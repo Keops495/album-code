@@ -53,7 +53,7 @@ class Authentication extends CI_Controller {
         $this->load->view('login');
       }
 
-    redirect("User/logged/");
+    redirect("User/logged");
 
    }
    else{

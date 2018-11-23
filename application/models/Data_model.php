@@ -22,12 +22,12 @@
             $this->db->query("INSERT INTO session SET id ='".$id."'");
         }
 
-        function close_session() {
-            $this->db->query("DELETE FROM session");
+        function get_sessions() {
+            $this->db->query("SELECT id FROM session")->row(0,"array")['id'];
         }
 
-        function get_session() {
-            $this->db->query("SELECT id FROM session")->result_array();
+        function close_session() {
+            $this->db->query("DELETE FROM session");
         }
 
         function get_n($album_id){

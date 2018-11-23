@@ -8,7 +8,7 @@ class User extends CI_Controller {
 	{
 	    $this->load->model('User_model');
 	    $this->load->model('Data_model');
-	    $user_id = $this->Data_model->get_session();
+	    $user_id = $this->Data_model->get_sessions();
 	    var_dump($user_id);die();
 	    if(!isset($user_id))
 	    	redirect("https://keops-web1.herokuapp.com/");
@@ -50,7 +50,7 @@ class User extends CI_Controller {
 	{
 	    $this->load->model('User_model');
 	    $this->load->model("Data_model");
-	    $user_id = $this->Data_model->get_session()['id'];
+	    $user_id = $this->Data_model->get_sessions();
 	    if(!isset($user_id))
 	    	redirect("https://keops-web1.herokuapp.com/");
 
