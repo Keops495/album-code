@@ -89,6 +89,9 @@ class User extends CI_Controller {
 	public function create_photo($album_id)
 	{
 
+		print_r($this->input->post());
+		die();
+
 	    $this->load->model('User_model');
 
 	    $this->User_model->add_more_photo($album_id,$this->input->post());
