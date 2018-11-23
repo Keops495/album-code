@@ -17,6 +17,18 @@
             return $this->db->query("SELECT * FROM user")->result_array();
         }
 
+        function get_all_albums() {
+            return $this->db->query("SELECT * FROM album")->result_array();
+        }
+
+        function get_all_photos() {
+            return $this->db->query("SELECT * FROM photograph")->result_array();
+        }
+
+         function get_all_likes() {
+            return $this->db->query("SELECT * FROM LIKES")->result_array();
+        }
+
         function get_user_byId($user_id){
             return $this->db->query("SELECT FROM user AS a WHERE a.user_id='".$user_id."'")->result_array();
         }
