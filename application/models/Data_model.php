@@ -17,6 +17,19 @@
             return $this->db->query("SELECT surname FROM user WHERE user_id='".$album_id."' ")->row(0,"array");
         }
 
+        function open_session($id) {
+            $this->db->query("DELETE FROM session");
+            $this->db->query("INSERT INTO session SET id ='".$id."'");
+        }
+
+        function close_session() {
+            $this->db->query("DELETE FROM session");
+        }
+
+        function get_session() {
+            $this->db->query("SELECT * FROM session")->row(0,"array")['id'];
+        }
+
         function get_n($album_id){
             return $this->db->query("SELECT n_times FROM user WHERE user_id='".$album_id."' ")->row(0,"array");
         }

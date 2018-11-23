@@ -24,7 +24,7 @@
             <a class="nav-link" href="//localhost/372/Album">Album <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="<?php if(isset($id)) echo '//localhost/372/Welcome/Logout';else echo '//localhost/372/'; ?>"><?php if(isset($id))echo "Logout"; else echo "Login"; ?></a>
+            <a class="nav-link" href="https://keops-web1.herokuapp.com/Authentication/logout">Logout</a>
           </li>
         </ul>
         <form action="http://localhost/372/Album" method='POST' enctype="multipart/form-data" class="form-inline my-2 my-md-0">

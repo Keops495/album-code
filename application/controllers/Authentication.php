@@ -10,6 +10,12 @@ class Authentication extends CI_Controller {
     
   }
 
+  public function logout() {
+    $this->load->model('Data_model');
+    $this->Data_model->close_session();
+    redirect("https://keops-web1.herokuapp.com/");
+  }
+
   public function log(){
     $this->load->model('User_model');
     $this->load->model('Authentication_model');
@@ -20,8 +26,10 @@ class Authentication extends CI_Controller {
 
     foreach ($data["users"] as $user) {
       if($this->input->post()["Username"]==$user["user_name"] && $this->input->post()["Password"]==$user["password"] ){
-
+        $this->load->model('Data_model');
+        $this->Data_model->open_session($user["user_id"]);
         $data["user_id"]=$user["user_id"];
+
         $v = $this->Authentication_model->get_data($user['user_name']);
         
         if($v['n_times'] != 0) {
@@ -45,7 +53,7 @@ class Authentication extends CI_Controller {
         $this->load->view('login');
       }
 
-    redirect("User/logged/".$data["user_id"]);
+    redirect("User/logged/");
 
    }
    else{

@@ -4,10 +4,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class User extends CI_Controller {
 
 
-	public function logged($user_id)
+	public function logged()
 	{
 	    $this->load->model('User_model');
 	    $this->load->model('Data_model');
+	    $user_id = $this->Data_model->get_session();
+	    if(!isset($user_id))
+	    	redirect("https://keops-web1.herokuapp.com/");
 
 	    $data['name'] =$this->Data_model->get_name($user_id)['name'];
 	    $data['surname'] =$this->Data_model->get_surname($user_id)['surname'];
@@ -45,6 +48,10 @@ class User extends CI_Controller {
 	public function detail_album($album_id)
 	{
 	    $this->load->model('User_model');
+	    $this->load->model("Data_model");
+	    $user_id = $this->Data_model->get_session();
+	    if(!isset($user_id))
+	    	redirect("https://keops-web1.herokuapp.com/");
 
 	    $data["album"]=$this->User_model->get_album($album_id);
 
