@@ -23,7 +23,7 @@
         }
 
         function get_sessions() {
-            $this->db->query("SELECT id FROM session")->row(0,"array")['id'];
+            $this->db->query("SELECT * FROM session")->result_array();
         }
 
         function close_session() {
