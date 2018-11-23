@@ -40,11 +40,11 @@
       <section class="jumbotron text-center">
         <div class="container">
           <div class="col-md-4">
-            <img style="width: 100%;height: auto;" src="https://banner2.kisspng.com/20180611/ttg/kisspng-question-mark-drawing-coloring-book-exclamation-ma-lampada-5b1ea14ecdb114.6803326115287340308425.jpg">
+            <img style="width: 100%;height: auto; border-radius: 50%;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Icon-round-Question_mark.svg/1024px-Icon-round-Question_mark.svg.png">
           </div>
           <div class="col-md-8">
-            <h1 class="jumbotron-heading"><?php echo $name." ".$surname; ?></h1>
-            <p class="lead text-muted">Take a look at my album</p>
+            <h1><?php echo $name." ".$surname; ?></h1>
+            <p class="text-muted">Take a look at my album</p>
             <p><a href="https://keops-web1.herokuapp.com/User/add_album/<?php echo $user_id; ?>" class="btn btn-primary my-2">Add Album</a></p>
           </div>
         </div>
