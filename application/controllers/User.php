@@ -8,6 +8,10 @@ class User extends CI_Controller {
 	{
 	    $this->load->model('User_model');
 
+	    $data['name'] =$this->User_model->get_name($user_id)['name'];
+	    $data['surname'] =$this->User_model->get_surname($user_id)['surname'];
+	    $data['n_times'] =$this->User_model->get_n($user_id)['n_times'];
+
 	    $data["albums"]=$this->User_model->get_user_album($user_id);
 
 	    for ($i=0; $i <count($data["albums"]); $i++) { 

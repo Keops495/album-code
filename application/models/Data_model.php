@@ -9,6 +9,18 @@
             return $this->db->query("SELECT photo_url FROM album, photograph WHERE photo_id='".$album_id."' ")->result_array();
         }
 
+        function get_name($album_id){
+            return $this->db->query("SELECT name FROM user WHERE user_id='".$album_id."' ")->row(0,"array");
+        }
+
+        function get_surname($album_id){
+            return $this->db->query("SELECT surname FROM user WHERE user_id='".$album_id."' ")->row(0,"array");
+        }
+
+        function get_n($album_id){
+            return $this->db->query("SELECT n_times FROM user WHERE user_id='".$album_id."' ")->row(0,"array");
+        }
+
         function get_user_album($user_id){
             return $this->db->query("SELECT a.* FROM album AS a, user AS u WHERE a.album_user_id='".$user_id."' ")->result_array();
         }

@@ -39,11 +39,14 @@
 
       <section class="jumbotron text-center">
         <div class="container">
-          <h1 class="jumbotron-heading">Album</h1>
-          <p class="lead text-muted">Take a look at my album</p>
-          <p>
-            <a href="https://keops-web1.herokuapp.com/User/add_album/<?php echo $user_id; ?>" class="btn btn-primary my-2">Add Album</a>
-          </p>
+          <div class="col-md-4">
+            <img src="https://banner2.kisspng.com/20180611/ttg/kisspng-question-mark-drawing-coloring-book-exclamation-ma-lampada-5b1ea14ecdb114.6803326115287340308425.jpg">
+          </div>
+          <div class="col-md-8">
+            <h1 class="jumbotron-heading"><?php echo $name." ".$surname; ?></h1>
+            <p class="lead text-muted">Take a look at my album</p>
+            <p><a href="https://keops-web1.herokuapp.com/User/add_album/<?php echo $user_id; ?>" class="btn btn-primary my-2">Add Album</a></p>
+          </div>
         </div>
       </section>
 
