@@ -44,10 +44,9 @@
               <img style="width: 100%;height: auto;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Icon-round-Question_mark.svg/1024px-Icon-round-Question_mark.svg.png">
             </div>
             <div class="col-md-1"></div>
-            <div class="col-md-4" style="text-align: left;margin-top: 50px;">
+            <div class="col-md-4" style="text-align: center;margin-top: 50px;">
               <h1><?php echo $name." ".$surname; ?></h1>
-              <p class="text-muted">Take a look at my album</p>
-              <p><a href="https://keops-web1.herokuapp.com/User/add_album/<?php echo $user_id; ?>" class="btn btn-primary my-2">Add Album</a></p>
+              <p><a style="width: 100%;background-color: coral;color: white;border: 0;" href="https://keops-web1.herokuapp.com/User/add_album/<?php echo $user_id; ?>" class="btn my-2">Add Album</a></p>
             </div>
             <div class="col-md-4" style="text-align: left;margin-top: 50px;">
               <p class="text-muted">N süreniz: <?php echo $n_times; ?></p>
