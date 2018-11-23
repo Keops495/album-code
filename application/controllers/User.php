@@ -70,7 +70,7 @@ class User extends CI_Controller {
 
 	    $data["user_id"]=$data["album"]["album_user_id"];
 
-		$this->load->view('album_detail',$data);
+		redirect("User/detail_album/".$data["album_id"]);
 	}
 
 	public function add_album($user_id)
