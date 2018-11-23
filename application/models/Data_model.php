@@ -46,6 +46,10 @@
             return $this->db->query("SELECT a.* FROM album AS a, user AS u WHERE a.album_user_id='".$user_id."' ")->result_array();
         }
 
+        function album_search($like,$user_id) {
+            return $this->db->query("SELECT * FROM album WHERE album_user_id = '".$user_id."' AND name LIKE '".$like."%'")->result_array();
+        }
+
         function get_all_users(){
             return $this->db->query("SELECT * FROM user")->result_array();
         }

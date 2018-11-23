@@ -28,7 +28,7 @@
             <a class="nav-link" href="https://keops-web1.herokuapp.com/Authentication/logout">Logout</a>
           </li>
         </ul>
-        <form action="http://localhost/372/Album" method='POST' enctype="multipart/form-data" class="form-inline my-2 my-md-0">
+        <form action="https://keops-web1.herokuapp.com/User/logged/<?php echo $user_id; ?>" method='POST' enctype="multipart/form-data" class="form-inline my-2 my-md-0">
           <input class="form-control" type="text" placeholder="Search" name="search" aria-describedby="basic-addon1">
         </form>
       </div>
@@ -49,7 +49,7 @@
               <p class="text-muted">Albüm Sayfanıza Hoşgeldiniz!</p>
               <p><a style="width: 100%;background-color: coral;color: white;border: 0;" href="https://keops-web1.herokuapp.com/User/add_album/<?php echo $user_id; ?>" class="btn my-2">Add Album</a></p>
             </div>
-            <div class="col-md-4" style="text-align: left;margin-top: 50px;">
+            <div class="col-md-4" style="text-align: center;margin-top: 50px;">
               <p class="text-muted">N süreniz: <?php echo $n_times; ?></p>
               <p class="text-muted">Fotoğraflar isteğiniz üzerine belli bir süre sonra silinir. Bu süreyi değiştirebilirsiniz. </p>
               <form action="https://keops-web1.herokuapp.com/User/N/<?php echo $user_id; ?>" method='POST' enctype="multipart/form-data" style="text-align: center;">

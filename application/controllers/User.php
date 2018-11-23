@@ -9,13 +9,17 @@ class User extends CI_Controller {
 	    $this->load->model('User_model');
 	    $this->load->model('Data_model');
 	    $user_idx = $this->Data_model->get_sessions();
-
+	    if($this->input->post()) {
+	    	$temp = $this->input->post()['search'];
+	    	$data["albums"]=$this->User_model->album_search($temp,$user_id);
+	    } else {
+	    	$data["albums"]=$this->User_model->get_user_album($user_id);
+	    }
 	    $data['name'] =$this->Data_model->get_name($user_id)['name'];
 	    $data['surname'] =$this->Data_model->get_surname($user_id)['surname'];
 	    $data['n_times'] =$this->Data_model->get_n($user_id)['n_times'];
 
-	    $data["albums"]=$this->User_model->get_user_album($user_id);
-
+	    
 	    for ($i=0; $i <count($data["albums"]); $i++) { 
 
 	    	$data["albums"][$i]["one_photo"]=$this->User_model->get_one_photo($data["albums"][$i]["album_id"]);
