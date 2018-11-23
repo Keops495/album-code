@@ -7,7 +7,8 @@
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 <body>
-
+    <link rel="stylesheet" type="text/css" href="https://keops-web1.herokuapp.com/assets/notify.css">
+    <script src="https://keops-web1.herokuapp.com/assets/notify.js" crossorigin="anonymous"></script>
     <style>a{color: black;text-decoration: none;}a:hover{text-decoration: none;color: black;}</style>
     <header>
       <nav class="navbar navbar-expand navbar-dark bg-dark">
@@ -28,31 +29,44 @@
             <a class="nav-link" href="https://keops-web1.herokuapp.com/Authentication/logout">Logout</a>
           </li>
           <li>
-            <div class="box">
-    <div class="notifications">
-        <i class="fa fa-bell"></i>
-        <span class="num">4</span>
-        <ul>
-            <li class="icon">
-                <span class="icon"><i class="fa fa-user"></i></span>
-                <span class="text">Someone Like Your Post</span>
-            </li>
-            <li class="icon">
-                <span class="icon"><i class="fa fa-user"></i></span>
-                <span class="text">Someone Like Your Photo</span>
-            </li>
-            <li class="icon">
-                <span class="icon"><i class="fa fa-user"></i></span>
-                <span class="text">Someone Dislike Your Post</span>
-            </li>
-            <li class="icon">
-                <span class="icon"><i class="fa fa-user"></i></span>
-                <span class="text">Someone Comment on Your Post</span>
-            </li>
-        </ul>
-    </div>
-</div>
-          </li><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <div class="dropdowns-wrapper">
+              <div class="dropdown-container">
+                <div class="notifications dropdown dd-trigger" ng-click="showNotifications($event)">
+                  <span class="count animated" id="notifications-count">{{awaitingNotifications}}</span>
+                  <span class="fa fa-bell-o"></span>
+                </div>
+                <div class="dropdown-menu animated" id="notification-dropdown">
+                  <div class="dropdown-header">
+                    <span class="triangle"></span>
+                    <span class="heading">Notifications</span>
+                    <span class="count" id="dd-notifications-count">{{newNotifications.length}}</span>
+                  </div>
+                  <div class="dropdown-body">
+                    <div class="notification new" ng-repeat="notification in newNotifications.slice().reverse() track by notification.timestamp">
+                      <div class="notification-image-wrapper">
+                        <div class="notification-image">
+                          <img src="{{notification.user.imageUrl}}" alt="" width="32">
+                        </div>
+                      </div>
+                      <div class="notification-text">
+                         <span class="highlight">{{notification.user.name}}</span> {{notification.action}} {{notification.target}}
+                      </div>
+                    </div>
+                    <div class="notification" ng-repeat="notification in readNotifications.slice().reverse() track by $index">
+                      <div class="notification-image-wrapper">
+                        <div class="notification-image">
+                          <img src="{{notification.user.imageUrl}}" alt="" width="32">
+                        </div>
+                      </div>
+                      <div class="notification-text">
+                         <span class="highlight">{{notification.user.name}}</span> {{notification.action}} {{notification.target}}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
         </ul>
         <form action="https://keops-web1.herokuapp.com/User/logged/<?php echo $user_id; ?>" method='POST' enctype="multipart/form-data" class="form-inline my-2 my-md-0">
           <input class="form-control" type="text" placeholder="Search" name="search" aria-describedby="basic-addon1">
