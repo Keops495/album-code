@@ -7,10 +7,11 @@ class User extends CI_Controller {
 	public function logged($user_id)
 	{
 	    $this->load->model('User_model');
+	    $this->load->model('Data_model');
 
-	    $data['name'] =$this->User_model->get_name($user_id)['name'];
-	    $data['surname'] =$this->User_model->get_surname($user_id)['surname'];
-	    $data['n_times'] =$this->User_model->get_n($user_id)['n_times'];
+	    $data['name'] =$this->Data_model->get_name($user_id)['name'];
+	    $data['surname'] =$this->Data_model->get_surname($user_id)['surname'];
+	    $data['n_times'] =$this->Data_model->get_n($user_id)['n_times'];
 
 	    $data["albums"]=$this->User_model->get_user_album($user_id);
 
