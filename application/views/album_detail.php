@@ -72,7 +72,7 @@
                     <div class="btn-group">
                       <a href="https://keops-web1.herokuapp.com/User/delete_photo/<?php echo $photo["photo_id"]; ?>"><i class="fa fa-trash" aria-hidden="true"></i></a>
                       <span style="margin-left: 5px;margin-right: 5px;">|</span>
-                      <a href="#exampleModal"><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
+                      <a href="#exampleModal" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
                     </div>
                     <small class="text-muted">Added at: <?php echo $photo["photo_date"]; ?></small>
                   </div>
