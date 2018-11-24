@@ -64,7 +64,7 @@
             <?php foreach ($photos as $photo ){ ?>
             <div class="col-md-4">
               <div class="card mb-4 shadow-sm">
-                <a href="#popup" data-rel="popup" data-position-to="window" data-transition="fade"><img class="card-img-top" data-src="<?php echo $photo["photo_url"]; ?>" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="<?php echo $photo["photo_url"]; ?>" data-holder-rendered="true"></a>
+                <a href="#popup" data-rel="popup" data-position-to="window" data-transition="fade"><img class="card-img-top popphoto" data-src="<?php echo $photo["photo_url"]; ?>" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="<?php echo $photo["photo_url"]; ?>" data-holder-rendered="true"></a>
                 <div data-role="popup" id="popup" data-overlay-theme="b" data-theme="b" data-corners="false">
                    <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img class="popphoto" src="<?php echo $photo["photo_url"]; ?>" alt="P">
                 </div>
