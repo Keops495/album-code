@@ -53,7 +53,7 @@
                 </div>
               </div>
             </li>
-            <?php $counter++; } if($counter%2 ==1) { ?>
+            <?php $counter++; } else { ?>
             <li class="list-group-item list-group-item-warning">
               <div class="row">
                 <div class="col-md-6">
