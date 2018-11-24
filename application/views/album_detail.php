@@ -64,10 +64,7 @@
             <?php foreach ($photos as $photo ){ ?>
             <div class="col-md-4">
               <div class="card mb-4 shadow-sm">
-                <a href="#popup" data-rel="popup" data-position-to="window" data-transition="fade"><img class="card-img-top popphoto" data-src="<?php echo $photo["photo_url"]; ?>" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="<?php echo $photo["photo_url"]; ?>" data-holder-rendered="true"></a>
-                <div data-role="popup" id="popup" data-overlay-theme="b" data-theme="b" data-corners="false">
-                   <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img class="popphoto" src="<?php echo $photo["photo_url"]; ?>" alt="P">
-                </div>
+                <img class="card-img-top popphoto" data-src="<?php echo $photo["photo_url"]; ?>" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="<?php echo $photo["photo_url"]; ?>" data-holder-rendered="true">
                 <div class="card-body">
                   <p class="card-text"><?php echo $photo["key"]["thekey"]; ?></p>
                   <hr>
@@ -75,7 +72,7 @@
                     <div class="btn-group">
                       <a href="https://keops-web1.herokuapp.com/User/delete_photo/<?php echo $photo["photo_id"]; ?>"><i class="fa fa-trash" aria-hidden="true"></i></a>
                       <span style="margin-left: 5px;margin-right: 5px;">|</span>
-                      <a href="https://keops-web1.herokuapp.com/Share/shares/<?php echo $user_id; ?>/<?php echo $photo["photo_id"]; ?>"><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
+                      <a data-toggle="modal" data-target="#exampleModal"><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
                     </div>
                     <small class="text-muted">Added at: <?php echo $photo["photo_date"]; ?></small>
                   </div>
@@ -86,7 +83,31 @@
           </div>
         </div>
       </div>
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
 
     </main>
 <svg xmlns="http://www.w3.org/2000/svg" width="347" height="225" viewBox="0 0 347 225" preserveAspectRatio="none" style="display: none; visibility: hidden; position: absolute; top: -100%; left: -100%;"><defs><style type="text/css"></style></defs><text x="0" y="17" style="font-weight:bold;font-size:17pt;font-family:Arial, Helvetica, Open Sans, sans-serif">Thumbnail</text></svg></body>
+<script>
+  $('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})
+</script>
 </html>
