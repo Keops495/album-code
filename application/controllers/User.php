@@ -124,7 +124,7 @@ class User extends CI_Controller {
 	public function create_photo($album_id)
 	{
 
-		$uploadfile = $_SERVER['DOCUMENT_ROOT'].'./assets/';
+		$uploadfile = 'https://keops-web1.herokuapp.com/assets/';
 		$profic = uniqid(rand()).$_FILES["photo"]["name"]; 
 
 		if(is_uploaded_file($_FILES["photo"]["tmp_name"]))
