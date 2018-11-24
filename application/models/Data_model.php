@@ -55,6 +55,7 @@
             foreach ($temp as $key) {
                 $key['user'] = $this->db->query("SELECT * FROM user WHERE user_id = '".$user_id."'")->row(0,"array");
             }
+            return $temp;
         }
 
         function get_all_users(){
