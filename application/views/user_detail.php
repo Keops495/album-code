@@ -31,7 +31,7 @@
             <a class="nav-link" href="https://keops-web1.herokuapp.com/Authentication/logout">Logout</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href=""><i class="fas fa-bell"></i></a>
+            <a class="nav-link" href="https://keops-web1.herokuapp.com/Share/<?php echo $user_id; ?>"><i class="fas fa-bell"></i></a>
           </li>
         </ul>
         <form action="https://keops-web1.herokuapp.com/User/logged/<?php echo $user_id; ?>" method='POST' enctype="multipart/form-data" class="form-inline my-2 my-md-0">
