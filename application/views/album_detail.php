@@ -72,7 +72,7 @@
                     <div class="btn-group">
                       <a href="https://keops-web1.herokuapp.com/User/delete_photo/<?php echo $photo["photo_id"]; ?>"><i class="fa fa-trash" aria-hidden="true"></i></a>
                       <span style="margin-left: 5px;margin-right: 5px;">|</span>
-                      <a href="#exampleModal" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
+                      <a href="#exampleModal" data-toggle="modal"><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
                     </div>
                     <small class="text-muted">Added at: <?php echo $photo["photo_date"]; ?></small>
                   </div>
@@ -106,7 +106,7 @@
     </main>
 <svg xmlns="http://www.w3.org/2000/svg" width="347" height="225" viewBox="0 0 347 225" preserveAspectRatio="none" style="display: none; visibility: hidden; position: absolute; top: -100%; left: -100%;"><defs><style type="text/css"></style></defs><text x="0" y="17" style="font-weight:bold;font-size:17pt;font-family:Arial, Helvetica, Open Sans, sans-serif">Thumbnail</text></svg></body>
 <script>
-  $('#myModal').on('shown.bs.modal', function () {
+  $('#exampleModal').on('shown.bs.modal', function () {
   $('#myInput').trigger('focus')
 })
 </script>
