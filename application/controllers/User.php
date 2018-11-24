@@ -126,7 +126,7 @@ class User extends CI_Controller {
 
 		$post_data = basename($_FILES['photo']['name']);
 		
-		move_uploaded_file($_FILES['tmp_name'], './uploads/' .$post_data);
+		move_uploaded_file($_FILES['photo']['tmp_name'], './uploads/' .$post_data);
 
 		print_r("hello");
 		die();
