@@ -31,6 +31,9 @@ class User extends CI_Controller {
 	    	}
 	    }
 
+	    print_r($data);
+	    die();
+
 	    $data["user_id"]=$user_id;
 
 		$this->load->view('user_detail',$data);

@@ -52,10 +52,12 @@ class User_model extends CI_Model {
         
     }
     function add_key_photo($photo_id,$data){
+       
        $this->db->query("INSERT INTO keywords SET key='".$this->db->escape($data['Key'])."', keyword_photo_id='".$photo_id."'");
         
     }
      function get_key($photo_id){
+
         return $this->db->query("SELECT a.key FROM keywords AS a WHERE a.keyword_photo_id='".$photo_id."' LIMIT 1")->row(0,"array");
     }
 
