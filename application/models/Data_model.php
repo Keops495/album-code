@@ -117,7 +117,7 @@
         }
 
         function photo($id) {
-            return $this->db->query("SELECT photo_url FROM photograph WHERE photo_id='".$id."' LIMIT 1")->row(0,"array");
+            return $this->db->query("SELECT * FROM photograph WHERE photo_id='".$id."' LIMIT 1")->row(0,"array");
         }
 
     }

@@ -40,18 +40,24 @@
     </header>
 
     <main role="main">
-        <ul class="list-group">
-          <?php $counter=0; foreach($users as $key) { ?>
-            <?php if($counter%2==0) { ?>
-            <li class="list-group-item list-group-item-primary">
-              <a href="https://keops-web1.herokuapp.com/Share/send/<?php echo $user_id; ?>/<?php echo $photo_id; ?>/<?php echo $key['user_id']; ?>"><p><?php echo $key['name']." ".$key['surname']; ?></p></a>
-            </li>
-            <?php $counter++; } else { ?>
-            <li class="list-group-item list-group-item-warning">
-              <a href="https://keops-web1.herokuapp.com/Share/send/<?php echo $user_id; ?>/<?php echo $photo_id; ?>/<?php echo $key['user_id']; ?>"><p><?php echo $key['name']." ".$key['surname']; ?></p></a>
-            </li>
-          <?php $counter++; }} ?>
-        </ul>
+      <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+          <ul class="list-group">
+            <?php $counter=0; foreach($users as $key) { ?>
+              <?php if($counter%2==0) { ?>
+              <li class="list-group-item list-group-item-primary">
+                <a href="https://keops-web1.herokuapp.com/Share/send/<?php echo $user_id; ?>/<?php echo $photo_id; ?>/<?php echo $key['user_id']; ?>"><p><?php echo $key['name']." ".$key['surname']; ?></p></a>
+              </li>
+              <?php $counter++; } else { ?>
+              <li class="list-group-item list-group-item-warning">
+                <a href="https://keops-web1.herokuapp.com/Share/send/<?php echo $user_id; ?>/<?php echo $photo_id; ?>/<?php echo $key['user_id']; ?>"><p><?php echo $key['name']." ".$key['surname']; ?></p></a>
+              </li>
+            <?php $counter++; }} ?>
+          </ul>
+        </div>
+        <div class="col-md-3"></div>
+      </div>
     </main>
 </body>
 </html>
