@@ -124,9 +124,18 @@ class User extends CI_Controller {
 	public function create_photo($album_id)
 	{
 
-		$post_data = basename($_FILES['photo']['name']);
+
+		$moved = move_uploaded_file($_FILES["photo"]["tmp_name"], ".uploads/" .$post_data );
+
+			if( $moved ) {
+			  echo "Successfully uploaded";         
+			} else {
+			  echo "Not uploaded because of error #".$_FILES["file"]["error"];
+			}
+
+		//$post_data = basename($_FILES['photo']['name']);
 		
-		move_uploaded_file($_FILES['photo']['tmp_name'], './uploads/' .$post_data);
+		//move_uploaded_file($_FILES['photo']['tmp_name'], './uploads/' .$post_data);
 
 		print_r("hello");
 		die();
