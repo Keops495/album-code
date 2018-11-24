@@ -12,6 +12,7 @@ class Share extends CI_Controller {
   	public function shares($user_id,$photo_id){
     	$this->load->model('Data_model');
     	$data['users'] = $this->Data_model->get_all_users();
+    	$data['user_id'] = $user_id;
     	$this->load->view("user_list");
   	}
 
