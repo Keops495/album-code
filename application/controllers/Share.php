@@ -2,7 +2,7 @@
 
 class Share extends CI_Controller {
 
-	public function index($id){
+	public function messages($id){
     	$this->load->model('Data_model');
     	$data['messages'] = $this->Data_model->get_message($id);
     	$this->load->view("message",$data);
