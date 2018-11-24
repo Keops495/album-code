@@ -26,12 +26,8 @@
               <input type="text" name="Key" class="form-control" placeholder="Enter photo key" aria-describedby="basic-addon1" required style="margin-left: 25%; text-align: center;">
               
               <div class="file-field">
-                  <div class="btn btn-primary btn-sm float-left">
-                      <span>Choose file</span>
-                      <input type="file">
-                  </div>
                   <div class="file-path-wrapper">
-                      <input class="file-path validate" type="text" placeholder="Upload your file" name="file">
+                      <input class="file-path validate" type="file" placeholder="Upload your file" name="file">
                   </div>
               </div>
    
