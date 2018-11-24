@@ -13,7 +13,7 @@ class Share extends CI_Controller {
     	$this->load->model('Data_model');
     	$data['users'] = $this->Data_model->get_all_users();
     	$data['user_id'] = $user_id;
-    	$this->load->view("user_list");
+    	$this->load->view("user_list",$data);
   	}
 
 }
