@@ -50,6 +50,13 @@
             return $this->db->query("SELECT * FROM album WHERE album_user_id = '".$user_id."' AND name LIKE '".$like."%'")->result_array();
         }
 
+        function get_message($user_id) {
+            $temp = $this->db->query("SELECT * FROM message WHERE message_to = '".$user_id."'")->result_array();
+            foreach ($temp as $key) {
+                $key['user'] = $this->db->query("SELECT * FROM user WHERE user_id = '".$user_id."'")->row(0,"array");
+            }
+        }
+
         function get_all_users(){
             return $this->db->query("SELECT * FROM user")->result_array();
         }
