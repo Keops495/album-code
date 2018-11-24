@@ -64,15 +64,18 @@
             <?php foreach ($photos as $photo ){ ?>
             <div class="col-md-4">
               <div class="card mb-4 shadow-sm">
-                <img class="card-img-top" data-src="<?php echo $photo["photo_url"]; ?>" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="<?php echo $photo["photo_url"]; ?>" data-holder-rendered="true">
+                <a href="#popup" data-rel="popup" data-position-to="window" data-transition="fade"><img class="card-img-top" data-src="<?php echo $photo["photo_url"]; ?>" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="<?php echo $photo["photo_url"]; ?>" data-holder-rendered="true"></a>
+                <div data-role="popup" id="popup" data-overlay-theme="b" data-theme="b" data-corners="false">
+                   <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img class="popphoto" src="<?php echo $photo["photo_url"]; ?>" alt="P">
+                </div>
                 <div class="card-body">
                   <p class="card-text"><?php echo $photo["key"]["thekey"]; ?></p>
+                  <hr>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <hr>
                       <a href="https://keops-web1.herokuapp.com/User/delete_photo/<?php echo $photo["photo_id"]; ?>"><i class="fa fa-trash" aria-hidden="true"></i></a>
                       <span style="margin-left: 5px;margin-right: 5px;">|</span>
-                      <a href="https://keops-web1.herokuapp.com/Share/<?php echo $user_id; ?>/<?php echo $photo["photo_id"]; ?>"><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
+                      <a href="https://keops-web1.herokuapp.com/Share/shares/<?php echo $user_id; ?>/<?php echo $photo["photo_id"]; ?>"><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
                     </div>
                     <small class="text-muted">Added at: <?php echo $photo["photo_date"]; ?></small>
                   </div>
