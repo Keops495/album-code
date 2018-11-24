@@ -53,19 +53,16 @@ class User_model extends CI_Model {
     }
     function add_key_photo($photo_id,$data){
        
-       print_r("INSERT INTO keywords (key,keyword_photo_id) VALUES ('".$data['Key']."', '".$photo_id."')");
-       die();
-
-       $this->db->query("INSERT INTO keywords (key,keyword_photo_id) VALUES ('".$data['Key']."', '".$photo_id."')");
+       $this->db->query("INSERT INTO thekeywords (thekey,keyword_photo_id) VALUES ('".$data['Key']."', '".$photo_id."')");
         
     }
      function get_key($photo_id){
 
-        return $this->db->query("SELECT a.key FROM keywords AS a WHERE a.keyword_photo_id='".$photo_id."' LIMIT 1")->row(0,"array");
+        return $this->db->query("SELECT a.thekey FROM thekeywords AS a WHERE a.keyword_photo_id='".$photo_id."' LIMIT 1")->row(0,"array");
     }
 
     function get_photos_with_key($album_id,$data){
-        return $this->db->query("SELECT p.* FROM photograph AS p, keywords AS k WHERE p.photo_album_id='".$album_id."' AND k.keyword_photo_id=p.photo_id AND k.key='".$data["Key"]."' ")->result_array();
+        return $this->db->query("SELECT p.* FROM photograph AS p, thekeywords AS k WHERE p.photo_album_id='".$album_id."' AND k.keyword_photo_id=p.photo_id AND k.key='".$data["Key"]."' ")->result_array();
     }
 
     function get_album_id_with_photo($photo_id){
