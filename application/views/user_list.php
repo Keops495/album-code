@@ -38,12 +38,12 @@
       </div>
     </nav>
     </header>
-
+    <style>a{color: black;text-decoration: none;}a:hover{text-decoration: none;color: black;}</style>
     <main role="main">
       <div class="row">
         <div class="col-md-3"></div>
         <div class="col-md-6">
-          <ul class="list-group">
+          <ul class="list-group" style="margin-top: 30px;">
             <?php $counter=0; foreach($users as $key) { ?>
               <?php if($counter%2==0) { ?>
               <li class="list-group-item list-group-item-primary">
