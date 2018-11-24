@@ -12,9 +12,9 @@ class Share extends CI_Controller {
   	public function shares($user_id,$photo_id){
     	$this->load->model('Data_model');
     	$data['users'] = $this->Data_model->get_all_users();
-      foreach ($data['users'] as $key) {
-        if($key['user_id'] == $user_id)
-          unset($key);
+      for ($i=0; $i < count($data['users']) ; $i++) { 
+        if($data['users'][$i]['user_id'] == $user_id)
+          unset($data['users'][$i]);
       }
     	$data['user_id'] = $user_id;
     	$data['photo_id'] = $photo_id;
