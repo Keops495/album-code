@@ -130,7 +130,7 @@ class User extends CI_Controller {
 			if( $moved ) {
 			  echo "Successfully uploaded";         
 			} else {
-			  echo "Not uploaded because of error #".$_FILES["file"]["error"];
+			  echo "Not uploaded because of error #".$_FILES["photo"]["error"];
 			}
 
 		//$post_data = basename($_FILES['photo']['name']);
