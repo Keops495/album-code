@@ -6,6 +6,7 @@ class Share extends CI_Controller {
     	$this->load->model('Data_model');
     	$data['messages'] = $this->Data_model->get_message($id);
     	$data['user_id'] = $id;
+    	var_dump($data['messages']);die();
     	$this->load->view("message",$data);
   	}
 
