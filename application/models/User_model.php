@@ -53,6 +53,9 @@ class User_model extends CI_Model {
     }
     function add_key_photo($photo_id,$data){
        
+       print_r("INSERT INTO keywords (key,keyword_photo_id) VALUES ('".$data['Key']."', '".$photo_id."')");
+       die();
+
        $this->db->query("INSERT INTO keywords (key,keyword_photo_id) VALUES ('".$data['Key']."', '".$photo_id."')");
         
     }
