@@ -28,7 +28,7 @@
               <div class="file-field">
                   <div class="btn btn-primary btn-sm float-left">
                       <span>Choose file</span>
-                      <input type="file">
+                      <input type="file" name="file">
                   </div>
               </div>
               <input type="submit" name="Sepet" value="Add" class="button" style="padding: 3px 6px; font-size: 15px; margin-left: 50%;">
