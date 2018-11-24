@@ -123,7 +123,7 @@ class User extends CI_Controller {
 
 	public function create_photo($album_id)
 	{
-
+		var_dump($_FILES);
 		print_r($this->input->post());
 		die();
 		
