@@ -124,7 +124,7 @@ class User extends CI_Controller {
 	public function create_photo($album_id)
 	{
 
-
+		$post_data = basename($_FILES['photo']['name']);
 		$moved = move_uploaded_file($_FILES["photo"]["tmp_name"], ".uploads/" .$post_data );
 
 			if( $moved ) {
