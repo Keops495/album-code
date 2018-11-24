@@ -41,18 +41,30 @@
 
     <main role="main">
         <ul class="list-group">
-          <?php foreach($messages as $key) { ?>
+          <?php $counter=0; foreach($messages as $key) { ?>
+            <?php if($counter%2==0) { ?>
             <li class="list-group-item list-group-item-primary">
               <div class="row">
                 <div class="col-md-6">
                   <img style="width: 100%;" src="<?php echo $key['message']; ?>">
                 </div>
-                <div class="col-md-6">
-                  <p><?php echo $key['user']['name']." ".$key['user']['surname']; ?></p>
+                <div class="col-md-6" style="text-align: center;">
+                  <h1><?php echo $key['user']['name']." ".$key['user']['surname']; ?></h1>
                 </div>
               </div>
             </li>
-          <?php } ?>
+            <?php $counter++; } if($counter%2 ==1) { ?>
+            <li class="list-group-item list-group-item-warning">
+              <div class="row">
+                <div class="col-md-6">
+                  <img style="width: 100%;" src="<?php echo $key['message']; ?>">
+                </div>
+                <div class="col-md-6" style="text-align: center;">
+                  <h1><?php echo $key['user']['name']." ".$key['user']['surname']; ?></h1>
+                </div>
+              </div>
+            </li>
+          <?php $counter++; }} ?>
         </ul>
 
     </main>
