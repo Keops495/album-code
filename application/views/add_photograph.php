@@ -26,7 +26,7 @@
               <input type="text" name="Key" class="form-control" placeholder="Enter photo key" aria-describedby="basic-addon1" required style="margin-left: 25%; text-align: center;">
               <div class='form-group'>
                 <label>Profile Photo</label>
-                <input type="file" style='margin-bottom: 10px;' name="register_profile_image" required>
+                <input type="file" style='margin-bottom: 10px;' name="photo" required>
               </div>                        
               <input type="submit" name="Sepet" value="Add" class="button" style="padding: 3px 6px; font-size: 15px; margin-left: 50%;">
           </form>

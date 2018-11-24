@@ -123,8 +123,9 @@ class User extends CI_Controller {
 
 	public function create_photo($album_id)
 	{
-		var_dump($_FILES);
-		print_r($this->input->post());
+
+		$post_data = basename($_FILES['photo']['name']);
+		print_r($post_data);
 		die();
 		
 	    $this->load->model('User_model');
