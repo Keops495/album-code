@@ -69,10 +69,8 @@
                   <p class="card-text"><?php echo $photo["key"]["thekey"]; ?></p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <form action="https://keops-web1.herokuapp.com/User/delete_photo/<?php echo $photo["photo_id"]; ?>">
-                        <input type="submit" value="Delete" />
-                      </form>
-        
+                      <a href="https://keops-web1.herokuapp.com/User/delete_photo/<?php echo $photo["photo_id"]; ?>"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                      <a href="https://keops-web1.herokuapp.com/Share/<?php echo $user_id; ?>/<?php echo $photo["photo_id"]; ?>"><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
                     </div>
                     <small class="text-muted">Added at: <?php echo $photo["photo_date"]; ?></small>
                   </div>

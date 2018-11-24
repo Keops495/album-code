@@ -9,10 +9,11 @@ class Share extends CI_Controller {
     	$this->load->view("message",$data);
   	}
 
-  	/*public function share($user_id,$photo_id){
+  	public function share($user_id,$photo_id){
     	$this->load->model('Data_model');
     	$data['users'] = $this->Data_model->get_all_users();
-  	}*/
+    	var_dump($data['users']);die();
+  	}
 
 }
 
