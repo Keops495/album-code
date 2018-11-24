@@ -24,13 +24,11 @@
             <form action="https://keops-web1.herokuapp.com/User/create_photo/<?php echo $album_id; ?>" method='POST' enctype="multipart/form-data" style="text-align: center; margin-left: 36%;">
               <input type="text" name="Url" class="form-control" placeholder="Enter photo url" aria-describedby="basic-addon1" required style="margin-left: 25%; text-align: center;">
               <input type="text" name="Key" class="form-control" placeholder="Enter photo key" aria-describedby="basic-addon1" required style="margin-left: 25%; text-align: center;">
-              
-              <div class="file-field">
-                  <div class="file-path-wrapper">
-                      <input class="file-path validate" type="file" placeholder="Upload your file" name="file">
-                  </div>
-              </div>
-   
+              <label for="avatar">Choose a profile picture:</label>
+
+            <input type="file"
+               id="avatar" name="avatar"
+               accept="image/png, image/jpeg">
               <input type="submit" name="Sepet" value="Add" class="button" style="padding: 3px 6px; font-size: 15px; margin-left: 50%;">
           </form>
           </div>
