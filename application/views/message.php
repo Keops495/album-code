@@ -29,7 +29,7 @@
             <a class="nav-link" href="https://keops-web1.herokuapp.com/Authentication/logout">Logout</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="https://keops-web1.herokuapp.com/Share/<?php echo $user_id; ?>"><i class="fas fa-bell"></i></a>
+            <a class="nav-link" href="https://keops-web1.herokuapp.com/Share/messages/<?php echo $user_id; ?>"><i class="fas fa-bell"></i></a>
           </li>
         </ul>
         <form action="http://localhost/372/Album" method='POST' enctype="multipart/form-data" class="form-inline my-2 my-md-0">
@@ -49,7 +49,7 @@
                   <img style="width: 100%;" src="<?php echo $key['message']; ?>">
                 </div>
                 <div class="col-md-6" style="text-align: center;">
-                  <h1><?php echo $key['user']['name']." ".$key['user']['surname']; ?></h1>
+                  <h1 style="margin-top: 150px;"><?php echo $key['user']['name']." ".$key['user']['surname']; ?></h1>
                 </div>
               </div>
             </li>
@@ -60,7 +60,7 @@
                   <img style="width: 100%;" src="<?php echo $key['message']; ?>">
                 </div>
                 <div class="col-md-6" style="text-align: center;">
-                  <h1><?php echo $key['user']['name']." ".$key['user']['surname']; ?></h1>
+                  <h1 style="margin-top: 150px;"><?php echo $key['user']['name']." ".$key['user']['surname']; ?></h1>
                 </div>
               </div>
             </li>
