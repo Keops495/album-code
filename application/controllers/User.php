@@ -14,8 +14,6 @@ class User extends CI_Controller {
 	    	$data["albums"]=$this->Data_model->album_search($temp,$user_id);
 	    } else {
 	    	$data["albums"]=$this->User_model->get_user_album($user_id);
-	    	print_r($data["albums"]);
-	    	die();
 	    }
 	    $data['name'] =$this->Data_model->get_name($user_id)['name'];
 	    $data['surname'] =$this->Data_model->get_surname($user_id)['surname'];
@@ -32,9 +30,6 @@ class User extends CI_Controller {
 	    		$data["albums"][$i]["one_photo"]["photo_url"]="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/1024px-No_image_available.svg.png";
 	    	}
 	    }
-
-	    print_r($data);
-	    die();
 
 	    $data["user_id"]=$user_id;
 
