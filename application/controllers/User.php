@@ -14,6 +14,8 @@ class User extends CI_Controller {
 	    	$data["albums"]=$this->Data_model->album_search($temp,$user_id);
 	    } else {
 	    	$data["albums"]=$this->User_model->get_user_album($user_id);
+	    	print_r($data["albums"]);
+	    	die();
 	    }
 	    $data['name'] =$this->Data_model->get_name($user_id)['name'];
 	    $data['surname'] =$this->Data_model->get_surname($user_id)['surname'];
