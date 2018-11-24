@@ -76,6 +76,7 @@
                       <a href="https://keops-web1.herokuapp.com/User/delete_photo/<?php echo $photo["photo_id"]; ?>"><i class="fa fa-trash" aria-hidden="true"></i></a>
                       <span style="margin-left: 5px;margin-right: 5px;">|</span>
                       <a href="#exampleModal" data-toggle="modal"><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
+                      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#exampleModal">Open Modal</button>
                       <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog" role="document">
                           <div class="modal-content">
