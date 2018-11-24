@@ -30,11 +30,7 @@
                       <span>Choose file</span>
                       <input type="file">
                   </div>
-                  <div class="file-path-wrapper">
-                      <input class="file-path validate" type="text" placeholder="Upload your file">
-                  </div>
               </div>
-   
               <input type="submit" name="Sepet" value="Add" class="button" style="padding: 3px 6px; font-size: 15px; margin-left: 50%;">
           </form>
           </div>
