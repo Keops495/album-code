@@ -19,7 +19,7 @@ class Share extends CI_Controller {
 
   	public function send($user_id,$photo_id,$to){
     	$this->load->model('Data_model');
-    	$photo = $this->Data_model->get_photo($photo_id);
+    	$photo = $this->Data_model->photo($photo_id);
     	$this->Data_model->send_message($user_id,$photo,$to);
     	redirect("https://keops-web1.herokuapp.com/User/detail_album/".$photo_id);
   	}
