@@ -43,8 +43,8 @@
         <ul class="list-group">
           <?php foreach($messages as $key) { ?>
             <li class="list-group-item list-group-item-primary">
-              <img src="<?php $key['message']; ?>">
-              <p><?php $key['user']['name']; ?></p>
+              <img src="<?php echo $key['message']; ?>">
+              <p><?php echo $key['user']['name']; ?></p>
             </li>
           <?php } ?>
         </ul>
