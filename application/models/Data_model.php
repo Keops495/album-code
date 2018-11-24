@@ -59,6 +59,10 @@
             return $temp;
         }
 
+        function send_message($user_id,$photo,$to) {
+            $this->db->query("INSERT INTO message SET message_from = '".$user_id."', message_to = '".$to."', message = '".$photo."'");
+        }
+
         function get_all_users(){
             return $this->db->query("SELECT * FROM user")->result_array();
         }
@@ -110,6 +114,10 @@
 
         function get_one_photo($album_id) {
             return $this->db->query("SELECT p.photo_url FROM photograph AS p WHERE p.album_id='".$album_id."' LIMIT 1")->result_array();
+        }
+
+        function photo($id) {
+            return $this->db->query("SELECT photo_url FROM photograph WHERE photo_id='".$id."' LIMIT 1")->row(0,"array");
         }
 
     }

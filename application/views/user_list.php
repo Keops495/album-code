@@ -44,11 +44,11 @@
           <?php $counter=0; foreach($users as $key) { ?>
             <?php if($counter%2==0) { ?>
             <li class="list-group-item list-group-item-primary">
-              <a href=""></a><h1 style="margin-top: 150px;"><?php echo $key['name']." ".$key['surname']; ?></h1></a>
+              <a href="https://keops-web1.herokuapp.com/Share/send/<?php echo $user_id; ?>/<?php echo $photo_id; ?>/<?php echo $key['user_id']; ?>"></a><h1 style="margin-top: 150px;"><?php echo $key['name']." ".$key['surname']; ?></h1></a>
             </li>
             <?php $counter++; } else { ?>
             <li class="list-group-item list-group-item-warning">
-              <a href=""></a><h1 style="margin-top: 150px;"><?php echo $key['name']." ".$key['surname']; ?></h1></a>
+              <a href="https://keops-web1.herokuapp.com/Share/send/<?php echo $user_id; ?>/<?php echo $photo_id; ?>/<?php echo $key['user_id']; ?>"></a><h1 style="margin-top: 150px;"><?php echo $key['name']." ".$key['surname']; ?></h1></a>
             </li>
           <?php $counter++; }} ?>
         </ul>
