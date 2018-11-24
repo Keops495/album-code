@@ -108,6 +108,6 @@
 <script type="text/javascript">
   $("#link").on("click",function(){
     $('#exampleModal').modal('show');
-  })
+  });
 </script>
 </html>
