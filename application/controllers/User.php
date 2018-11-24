@@ -125,9 +125,12 @@ class User extends CI_Controller {
 	{
 
 		$post_data = basename($_FILES['photo']['name']);
-		print_r($post_data);
-		die();
 		
+		move_uploaded_file($_FILES['tmp_name'], './uploads/' .$post_data);
+
+		print_r("hello");
+		die();
+
 	    $this->load->model('User_model');
 
 	    $this->User_model->add_more_photo($album_id,$this->input->post());
