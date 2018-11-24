@@ -54,7 +54,7 @@
             $temp = $this->db->query("SELECT * FROM message WHERE message_to = '".$user_id."'")->result_array();
             for ($i=0; $i <count($temp) ; $i++) 
             {
-                $temp[$i]['user'] = $this->db->query("SELECT * FROM user WHERE user_id = '".$user_id."'")->row(0,"array");
+                $temp[$i]['user'] = $this->db->query("SELECT * FROM user WHERE user_id = '".$temp[$i]["message_from"]."'")->row(0,"array");
             }
             return $temp;
         }
