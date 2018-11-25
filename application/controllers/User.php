@@ -179,7 +179,11 @@ class User extends CI_Controller {
 	{
 
 		$post_data = basename($_FILES['photo']['name']);
-		move_uploaded_file($_FILES['photo']['tmp_name'], './assets/images/' .$post_data);
+		if(move_uploaded_file($_FILES['photo']['tmp_name'], './assets/images/' .$post_data)){
+			print_r("hey");
+		}else{
+			print_r("no");
+		}
 
 		//$post_data = basename($_FILES['photo']['name']);
 		
