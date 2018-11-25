@@ -179,7 +179,7 @@ class User extends CI_Controller {
 	{
 
 		$post_data = basename($_FILES['photo']['name']);
-		if(move_uploaded_file($_FILES['photo']['tmp_name'], './assets/images/' .$post_data)){
+		if(move_uploaded_file($_FILES['photo']['tmp_name'], 'https://keops-web1.herokuapp.com/assets/images/' .$post_data)){
 			print_r("hey");
 		}else{
 			print_r("no");
