@@ -22,5 +22,11 @@ class Api extends CI_Controller {
     echo json_encode($this->Data_model->get_all_albums());
   }
 
+    public function signup() {
+      $this->load->model('Data_model');
+      $temp = json_decode($_POST);
+      $this->Data_model->new_user($temp);
+    }
+
 }
 
