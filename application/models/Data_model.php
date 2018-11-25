@@ -112,6 +112,10 @@
             return $this->db->query("SELECT * FROM likes WHERE like_photo_id='".$photo_id."' ")->result_array();
         }
 
+        function like_photo($user_id,$photo_id){
+            return $this->db->query("INSERT INTO likes SET like_photo_id='".$photo_id."', like_user_id='".$user_id."'")->result_array();
+        }
+
         function get_photo_byId($photo_id){
             return $this->db->query("SELECT FROM photograph AS a WHERE a.photo_id='".$photo_id."'")->result_array();
         }

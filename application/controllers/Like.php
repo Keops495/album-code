@@ -15,7 +15,15 @@ class Like extends CI_Controller {
 
   	public function send($user_id,$photo_id){
     	$this->load->model('Data_model');
-    	$this->Data_model->like_photo($user_id,$photo_id);
+      $data['likes'] = $this->Data_model->get_likes($photo_id);
+      $temp=0;
+      foreach ($data['likes'] as $key) {
+        if($key['like_user_id'] == $user_id)
+          $temp=1;
+      }
+      if($temp==0)
+    	 $this->Data_model->like_photo($user_id,$photo_id);
+      
     	redirect("https://keops-web1.herokuapp.com/User/detail_album/".$this->Data_model->photo($photo_id)['photo_album_id']);
   	}
 
