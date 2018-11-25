@@ -76,6 +76,8 @@
                       <a href="https://keops-web1.herokuapp.com/User/delete_photo/<?php echo $photo["photo_id"]; ?>"><i class="fa fa-trash" aria-hidden="true"></i></a>
                       <span style="margin-left: 5px;margin-right: 5px;">|</span>
                       <a href="https://keops-web1.herokuapp.com/Share/shares/<?php echo $user_id; ?>/<?php echo $photo["photo_id"]; ?>"><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
+                      <span style="margin-left: 5px;margin-right: 5px;">|</span>
+                      <span><?php echo count($photo["likes"]); ?><i class="fas fa-heart"></i></span>
                     </div>
                     <small class="text-muted">Added at: <?php echo $photo["photo_date"]; ?></small>
                   </div>
