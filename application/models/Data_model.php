@@ -50,6 +50,10 @@
             return $this->db->query("SELECT * FROM album WHERE album_user_id = '".$user_id."' AND name LIKE '".$like."%'")->result_array();
         }
 
+        function album_search2($like,$user_id) {
+            return $this->db->query("SELECT * FROM album WHERE album_user_id != '".$user_id."' AND name LIKE '".$like."%'")->result_array();
+        }
+
         function get_message($user_id) {
             $temp = $this->db->query("SELECT * FROM message WHERE message_to = '".$user_id."'")->result_array();
             for ($i=0; $i <count($temp) ; $i++) 
@@ -69,6 +73,10 @@
 
         function get_all_albums() {
             return $this->db->query("SELECT * FROM album")->result_array();
+        }
+
+        function get_all_albums2($user_id) {
+            return $this->db->query("SELECT * FROM album WHERE album_user_id != '".$user_id."'")->result_array();
         }
 
         function get_all_photosa() {
@@ -98,6 +106,10 @@
 
         function get_all_photos($album_id){
             return $this->db->query("SELECT a.* FROM photograph AS a WHERE a.album_id='".$album_id."' ")->result_array();
+        }
+
+        function get_likes($photo_id){
+            return $this->db->query("SELECT * FROM likes WHERE like_photo_id='".$photo_id."' ")->result_array();
         }
 
         function get_photo_byId($photo_id){

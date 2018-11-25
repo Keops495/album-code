@@ -36,6 +36,37 @@ class User extends CI_Controller {
 		$this->load->view('user_detail',$data);
 	}
 
+	public function all($user_id)
+	{
+	    $this->load->model('Data_model');
+	    $user_idx = $this->Data_model->get_sessions();
+	    if($this->input->post()) {
+	    	$temp = $this->input->post()['search'];
+	    	$data["albums"]=$this->Data_model->album_search2($temp,$user_id);
+	    } else {
+	    	$data["albums"]=$this->Data_model->get_all_albums2($user_id);
+	    }
+	    for ($i=0; $i < count($data["albums"]) ; $i++) { 
+	    	$data["albums"][$i]['namer'] =$this->Data_model->get_name($data['albums'][$i]['album_user_id'])['name'];
+	    	$data["albums"][$i]['surname'] =$this->Data_model->get_surname($data['albums'][$i]['album_user_id'])['surname'];
+	    }
+	    
+	    for ($i=0; $i <count($data["albums"]); $i++) { 
+
+	    	$data["albums"][$i]["one_photo"]=$this->User_model->get_one_photo($data["albums"][$i]["album_id"]);
+	    }
+
+	    for ($i=0; $i < count($data["albums"]) ; $i++) { 
+	    	if($data["albums"][$i]["one_photo"]["photo_url"]==""){
+	    		$data["albums"][$i]["one_photo"]["photo_url"]="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/1024px-No_image_available.svg.png";
+	    	}
+	    }
+
+	    $data["user_id"]=$user_id;
+
+		$this->load->view('all_albums',$data);
+	}
+
 	public function N($id) {
 		if ($this->input->post()) {
 			$temp = $this->input->post();
