@@ -27,7 +27,7 @@
         }
 
         function get_sessions($user_id) {
-            $this->db->query("SELECT * FROM sessions WHERE id='".$user_id."'")->row(0,"array")['id'];
+            return $this->db->query("SELECT * FROM sessions WHERE id='".$user_id."'")->row(0,"array")['id'];
         }
 
         function close_session($id) {
