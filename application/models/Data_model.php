@@ -113,7 +113,7 @@
         }
 
         function like_photo($user_id,$photo_id){
-            return $this->db->query("INSERT INTO likes SET like_photo_id='".$photo_id."', like_user_id='".$user_id."'")->result_array();
+            $this->db->query("INSERT INTO likes SET like_photo_id='".$photo_id."', like_user_id='".$user_id."'");
         }
 
         function get_photo_byId($photo_id){
