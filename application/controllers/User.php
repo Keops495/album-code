@@ -131,7 +131,7 @@ class User extends CI_Controller {
 
 	    $data["user_id"]=$data["album"]["album_user_id"];
 
-		$this->load->view('album_detail',$data);
+		$this->load->view('album_detail2',$data);
 	}
 
 	public function delete_photo($photo_id)
