@@ -73,7 +73,7 @@
                   <hr>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <span><?php echo count($photo["likes"]); ?><i class="fas fa-heart"></i></span>
+                      <a href=""><span><?php echo count($photo["likes"]); ?><i style="color: red;" class="fas fa-heart"></i></span></a>
                     </div>
                     <small class="text-muted">Added at: <?php echo $photo["photo_date"]; ?></small>
                   </div>
