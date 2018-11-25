@@ -178,20 +178,16 @@ class User extends CI_Controller {
 	public function create_photo($album_id)
 	{
 
-		$uploadfile = 'https://keops-web1.herokuapp.com/assets/';
-		$profic = uniqid(rand()).$_FILES["photo"]["name"]; 
+		print_r($_FILES['photo']);
 
-		if(is_uploaded_file($_FILES["photo"]["tmp_name"]))
-		{
-		    $moved = move_uploaded_file($_FILES["photo"]["tmp_name"], $uploadfile.$profic);
-		    if($moved)
-		    {
-		        echo "sucess";
-		    }
-		    else
-		    {
-		        echo 'failed';
-		    }
+		$folder="./assets/images/";
+		echo realpath($folder);
+
+		$post_data = basename($_FILES['photo']['name']);
+		if(move_uploaded_file($_FILES['photo']['tmp_name'], './assets/images/' .$post_data)){
+			print_r("hey");
+		}else{
+			print_r("no");
 		}
 
 		//$post_data = basename($_FILES['photo']['name']);
