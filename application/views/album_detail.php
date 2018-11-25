@@ -43,7 +43,7 @@
     </header>
 
     <main role="main">
-
+      <style>a{color: black;text-decoration: none;}a:hover{text-decoration: none;color: black;}</style>
       <section class="jumbotron text-center">
         <div class="container">
           <h1 class="jumbotron-heading"><?php echo $album["name"]; ?></h1>
