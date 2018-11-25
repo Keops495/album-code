@@ -177,6 +177,9 @@ class User extends CI_Controller {
 
 	public function create_photo($album_id)
 	{
+
+		print_r($FILES['photo']);
+
 		$folder="./assets/images/";
 		echo realpath($folder);
 
