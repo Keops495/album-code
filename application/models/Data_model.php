@@ -22,16 +22,16 @@
         }
 
         function open_session($id) {
-            $this->db->query("DELETE FROM session");
-            $this->db->query("INSERT INTO session SET id ='".$id."'");
+            $this->db->query("DELETE FROM sessions WHERE id = '".$id."'");
+            $this->db->query("INSERT INTO sessions SET id ='".$id."'");
         }
 
-        function get_sessions() {
-            $this->db->query("SELECT id FROM session")->row(0,"array")['id'];
+        function get_sessions($user_id) {
+            $this->db->query("SELECT * FROM sessions WHERE id='".$user_id."'")->row(0,"array")['id'];
         }
 
-        function close_session() {
-            $this->db->query("DELETE FROM session");
+        function close_session($id) {
+            $this->db->query("DELETE FROM sessions WHERE id = '".$id."'");
         }
 
         function get_n($album_id){

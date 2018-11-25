@@ -10,9 +10,9 @@ class Authentication extends CI_Controller {
     
   }
 
-  public function logout() {
+  public function logout($user_id) {
     $this->load->model('Data_model');
-    $this->Data_model->close_session();
+    $this->Data_model->close_session($user_id);
     redirect("https://keops-web1.herokuapp.com/");
   }
 
