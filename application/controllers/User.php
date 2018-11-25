@@ -40,7 +40,7 @@ class User extends CI_Controller {
 	{
 	    $this->load->model('Data_model');
 	    $this->load->model('User_model');
-	    $user_idx = $this->Data_model->get_sessions();
+	    $user_idx = $this->Data_model->get_sessions($user_id);
 	    if($this->input->post()) {
 	    	$temp = $this->input->post()['search'];
 	    	$data["albums"]=$this->Data_model->album_search2($temp,$user_id);
@@ -92,7 +92,7 @@ class User extends CI_Controller {
 	{
 	    $this->load->model('User_model');
 	    $this->load->model("Data_model");
-	    $user_id = $this->Data_model->get_sessions();
+	    $user_id = $this->Data_model->get_sessions($user_id);
 
 	    $data["album"]=$this->User_model->get_album($album_id);
 
@@ -115,7 +115,7 @@ class User extends CI_Controller {
 	{
 	    $this->load->model('User_model');
 	    $this->load->model("Data_model");
-	    $user_id = $this->Data_model->get_sessions();
+	    $user_id = $this->Data_model->get_sessions($user_id);
 
 	    $data["album"]=$this->User_model->get_album($album_id);
 
