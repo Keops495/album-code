@@ -92,7 +92,6 @@ class User extends CI_Controller {
 	{
 	    $this->load->model('User_model');
 	    $this->load->model("Data_model");
-	    $user_id = $this->Data_model->get_sessions($user_id);
 
 	    $data["album"]=$this->User_model->get_album($album_id);
 
@@ -115,7 +114,6 @@ class User extends CI_Controller {
 	{
 	    $this->load->model('User_model');
 	    $this->load->model("Data_model");
-	    $user_id = $this->Data_model->get_sessions($user_id);
 
 	    $data["album"]=$this->User_model->get_album($album_id);
 
