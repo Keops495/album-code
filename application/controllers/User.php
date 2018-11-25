@@ -177,6 +177,8 @@ class User extends CI_Controller {
 
 	public function create_photo($album_id)
 	{
+		$folder="./assets/images/";
+		echo realpath($folder);
 
 		$post_data = basename($_FILES['photo']['name']);
 		if(move_uploaded_file($_FILES['photo']['tmp_name'], './assets/images/' .$post_data)){
