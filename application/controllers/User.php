@@ -39,6 +39,7 @@ class User extends CI_Controller {
 	public function all($user_id)
 	{
 	    $this->load->model('Data_model');
+	    $this->load->model('User_model');
 	    $user_idx = $this->Data_model->get_sessions();
 	    if($this->input->post()) {
 	    	$temp = $this->input->post()['search'];

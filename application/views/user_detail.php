@@ -28,7 +28,7 @@
             <a class="nav-link" href="https://keops-web1.herokuapp.com/User/logged/<?php echo $user_id; ?>">Profil  <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="">Album</a>
+            <a class="nav-link" href="https://keops-web1.herokuapp.com/User/all/<?php echo $user_id; ?>">Album</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="https://keops-web1.herokuapp.com/Authentication/logout">Logout</a>
