@@ -84,7 +84,7 @@ class Authentication extends CI_Controller {
 
   public function out(){
     $this->session->sess_destroy();
-    header("Location: ".base_url());
+    redirect("https://keops-web1.herokuapp.com/");
   }
 
 }
