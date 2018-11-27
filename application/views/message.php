@@ -48,7 +48,19 @@
       </section>
         <ul class="list-group" style="padding: 0px 20px 20px 20px;">
           <?php $counter=0; foreach($messages as $key) { ?>
-            <?php if($counter%2==0) { ?>
+            <?php if($counter==0){ ?>
+            <li class="list-group-item list-group-item-primary" style="padding: 0px 10px 10px 10px;">
+              <div class="row">
+                <div class="col-md-6">
+                  <img style="width: 100%;" src="<?php echo $key['message']; ?>">
+                </div>
+                <div class="col-md-6" style="text-align: center;">
+                  <h1 style="margin-top: 150px;"><?php echo $key['user']['name']." ".$key['user']['surname']; ?></h1>
+                </div>
+              </div>
+            </li>
+            <?php } ?>
+            <?php elseif($counter%2==0 && $counter!=0) { ?>
             <li class="list-group-item list-group-item-primary" style="padding: 10px 10px 10px 10px;">
               <div class="row">
                 <div class="col-md-6">
