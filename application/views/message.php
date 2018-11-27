@@ -49,7 +49,7 @@
         <ul class="list-group" style="padding: 0px 20px 20px 20px;">
           <?php $counter=0; foreach($messages as $key) { ?>
             <?php if($counter%2==0) { ?>
-            <li class="list-group-item list-group-item-primary" style="padding: 10px 10px 10px 10px;">
+            <li class="list-group-item list-group-item-primary" style="padding: 0px 10px 10px 10px;">
               <div class="row">
                 <div class="col-md-6">
                   <img style="width: 100%;" src="<?php echo $key['message']; ?>">
@@ -60,7 +60,7 @@
               </div>
             </li>
             <?php $counter++; } else { ?>
-            <li class="list-group-item list-group-item-warning" style="padding: 10px 10px 10px 10px;">
+            <li class="list-group-item list-group-item-warning" style="padding: 0px 10px 10px 10px;">
               <div class="row">
                 <div class="col-md-6">
                   <img style="width: 100%;" src="<?php echo $key['message']; ?>">
