@@ -37,7 +37,7 @@
     </header>
 
     <main role="main">
-        <ul class="list-group">
+        <ul class="list-group" style="padding: 20px 20px 20px 20px;">
           <?php $counter=0; foreach($messages as $key) { ?>
             <?php if($counter%2==0) { ?>
             <li class="list-group-item list-group-item-primary" style="padding: 10px 10px 10px 10px;">
