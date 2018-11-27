@@ -69,9 +69,9 @@ class Authentication extends CI_Controller {
               $this->load->view('login');
             }
 
-         // redirect("User/logged/".$data['user_id']);
+         redirect("User/logged/".$data['user_id']);
 
-          redirect("User/logged/".$this->session->userdata['user']['user_id']);
+          //redirect("User/logged/".$this->session->userdata['user']['user_id']);
         }
       }
       else{
