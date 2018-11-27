@@ -36,7 +36,16 @@
     </nav>
     </header>
 
+
     <main role="main">
+      <style>a{color: black;text-decoration: none;}a:hover{text-decoration: none;color: black;}</style>
+      <section class="jumbotron text-center">
+        <div class="container">
+         
+          <p class="lead text-muted">Messages</p>
+
+        </div>
+      </section>
         <ul class="list-group" style="padding: 20px 20px 20px 20px;">
           <?php $counter=0; foreach($messages as $key) { ?>
             <?php if($counter%2==0) { ?>
