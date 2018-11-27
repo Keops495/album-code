@@ -107,7 +107,7 @@ class User extends CI_Controller {
 
 	    $data["album_id"]=$album_id;
 
-	    $data["user_id"]=$data["album"]["album_user_id"];
+	    $data["user_id"]=$this->session->userdata['admin']['user_id'];
 
 		$this->load->view('album_detail',$data);
 	}
@@ -129,7 +129,7 @@ class User extends CI_Controller {
 
 	    $data["album_id"]=$album_id;
 
-	    $data["user_id"]=$data["album"]["album_user_id"];
+	   	$data["user_id"]=$this->session->userdata['admin']['user_id'];
 
 		$this->load->view('album_detail2',$data);
 	}
