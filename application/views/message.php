@@ -71,7 +71,7 @@
                 </div>
               </div>
             </li>
-            <?php $counter++; } else if($counter%2==1) { ?>
+            <?php $counter++; } elseif($counter%2==1) { ?>
             <li class="list-group-item list-group-item-warning" style="padding: 10px 10px 10px 10px;">
               <div class="row">
                 <div class="col-md-6">
