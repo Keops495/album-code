@@ -29,7 +29,14 @@ class Authentication extends CI_Controller {
       
       if($this->input->post()){
         
+        print_r($this->input->post());
+
+
         $admin = $this->Data_model->getAdmin($this->input->post());
+
+
+        print_r($admin);
+        die();
 
         if(empty($admin)){
 
