@@ -6,9 +6,13 @@ class User extends CI_Controller {
 
 	public function logged($user_id)
 	{
+
+	//if(isset($this->session->userdata['user']['user_id'])){
 	    $this->load->model('User_model');
 	    $this->load->model('Data_model');
-	    $user_idx = $this->Data_model->get_sessions($user_id);
+	    $user_idx = $this->session->userdata['user']['user_id'];
+	    var_dump($user_idx);
+	    die();
 	    if($this->input->post()) {
 	    	$temp = $this->input->post()['search'];
 	    	$data["albums"]=$this->Data_model->album_search($temp,$user_id);
