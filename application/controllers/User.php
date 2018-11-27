@@ -10,6 +10,8 @@ class User extends CI_Controller {
 	//if(isset($this->session->userdata['user']['user_id'])){
 	    $this->load->model('User_model');
 	    $this->load->model('Data_model');
+	    print_r($this->session->userdata);
+	    die();
 	    $user_id = $this->session->userdata['admin']['user_id'];
 	    if($this->input->post()) {
 	    	$temp = $this->input->post()['search'];
