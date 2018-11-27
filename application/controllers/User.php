@@ -10,7 +10,7 @@ class User extends CI_Controller {
 	//if(isset($this->session->userdata['user']['user_id'])){
 	    $this->load->model('User_model');
 	    $this->load->model('Data_model');
-	    $user_idx = $this->session->userdata;
+	    $user_idx = $this->session->userdata['admin']['user_id'];
 	    var_dump($user_idx);
 	    die();
 	    if($this->input->post()) {
