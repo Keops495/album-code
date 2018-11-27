@@ -4,15 +4,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class User extends CI_Controller {
 
 
-	public function logged($user_id)
+	public function logged()
 	{
 
 	//if(isset($this->session->userdata['user']['user_id'])){
 	    $this->load->model('User_model');
 	    $this->load->model('Data_model');
-	    $user_idx = $this->session->userdata['admin']['user_id'];
-	    var_dump($user_idx);
-	    die();
+	    $user_id = $this->session->userdata['admin']['user_id'];
 	    if($this->input->post()) {
 	    	$temp = $this->input->post()['search'];
 	    	$data["albums"]=$this->Data_model->album_search($temp,$user_id);
@@ -77,7 +75,7 @@ class User extends CI_Controller {
 			$temp = $this->input->post();
 			$this->load->model("Data_model");
 			$this->Data_model->n_change($id,$temp["N"]);
-			redirect("https://keops-web1.herokuapp.com/User/logged/".$id);
+			redirect("https://keops-web1.herokuapp.com/User/logged/");
 		}
 	}
 
@@ -165,7 +163,7 @@ class User extends CI_Controller {
 
 	    $data["user_id"]=$user_id;
 
-		redirect("User/logged/".$data["user_id"]);
+		redirect("User/logged/");
 
 
 	}
