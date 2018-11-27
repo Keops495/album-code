@@ -215,6 +215,7 @@ class User extends CI_Controller {
 	public function search_key($album_id)
 	{
 
+		$this->load->model("Data_model");
 	    $this->load->model('User_model');
 
 	    $data["album"]=$this->User_model->get_album($album_id);
@@ -226,6 +227,7 @@ class User extends CI_Controller {
 	    for ($i=0; $i <count($data["photos"]) ; $i++) {
 
 	    	$data["photos"][$i]["key"]=$this->User_model->get_key($data["photos"][$i]["photo_id"]);
+	    	$data["photos"][$i]['likes']=$this->Data_model->get_likes($data["photos"][$i]['photo_id']);
 	    }
 
 	    $data["album_id"]=$album_id;
