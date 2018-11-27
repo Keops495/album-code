@@ -180,7 +180,7 @@ class User extends CI_Controller {
 	public function create_photo($album_id)
 	{
 
-		print_r($_FILES['photo']);
+		/*print_r($_FILES['photo']);
 
 		$folder="./assets/images/";
 		echo realpath($folder);
@@ -197,7 +197,7 @@ class User extends CI_Controller {
 		//move_uploaded_file($_FILES['photo']['tmp_name'], './uploads/' .$post_data);
 
 		print_r("hello");
-		die();
+		die();*/
 
 	    $this->load->model('User_model');
 
