@@ -35,8 +35,8 @@
             <a class="nav-link" href="https://keops-web1.herokuapp.com/Share/messages/<?php echo $user_id; ?>"><i class="fas fa-bell"></i></a>
           </li>
         </ul>
-        <form action="http://localhost/372/Album" method='POST' enctype="multipart/form-data" class="form-inline my-2 my-md-0">
-          <input class="form-control" type="text" placeholder="Search" name="search" aria-describedby="basic-addon1">
+        <form action="https://keops-web1.herokuapp.com/User/search_key/<?php echo $album_id; ?>" method='POST' enctype="multipart/form-data" class="form-inline my-2 my-md-0">
+          <input class="form-control" type="text" placeholder="Search" name="Key" aria-describedby="basic-addon1">
         </form>
       </div>
     </nav>
@@ -54,12 +54,6 @@
           </p>
         </div>
       </section>
-       <div class="row">
-            <form action="https://keops-web1.herokuapp.com/User/search_key/<?php echo $album_id; ?>" method='POST' enctype="multipart/form-data" style="text-align: center; margin-left: 42%;">
-              <input type="text" name="Key" class="form-control" placeholder="Enter key" aria-describedby="basic-addon1" required style="margin-left: 25%; text-align: center;">   
-              <input type="submit" name="Sepet" value="Search Key" class="button" style="padding: 3px 6px; font-size: 15px; margin-left: 50%;">
-          </form>
-        </div>
       <div class="album py-5 bg-light">
         <div class="container">
 
