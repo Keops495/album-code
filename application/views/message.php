@@ -42,7 +42,7 @@
       <section class="jumbotron text-center">
         <div class="container">
          
-          <p class="lead text-muted" style="font-size: 25px;">Messages</p>
+          <p class="lead text-muted" style="font-size: 40px; color: black;">Messages</p>
 
         </div>
       </section>
