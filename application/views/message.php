@@ -42,11 +42,11 @@
       <section class="jumbotron text-center">
         <div class="container">
          
-          <p class="lead text-muted">Messages</p>
+          <p class="lead text-muted" style="font-size: 25px;">Messages</p>
 
         </div>
       </section>
-        <ul class="list-group" style="padding: 20px 20px 20px 20px;">
+        <ul class="list-group" style="padding: 0px 20px 20px 20px;">
           <?php $counter=0; foreach($messages as $key) { ?>
             <?php if($counter%2==0) { ?>
             <li class="list-group-item list-group-item-primary" style="padding: 10px 10px 10px 10px;">
