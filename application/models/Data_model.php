@@ -140,7 +140,7 @@
             return $this->db->query("SELECT * FROM user WHERE user_name=".$this->db->escape($data['Username'])." AND password='".md5($data['Password'])."' LIMIT 1")->row_array(0,"array");
         }
 
-    }
+    
 
     }
 ?>
