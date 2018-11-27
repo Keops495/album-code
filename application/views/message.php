@@ -60,7 +60,7 @@
               </div>
             </li>
             <?php  $counter++; } ?>
-            <?php elseif(($counter%2==0) && ($counter!=0)) { ?>
+            <?php if(($counter%2==0) && ($counter!=0)) { ?>
             <li class="list-group-item list-group-item-primary" style="padding: 10px 10px 10px 10px;">
               <div class="row">
                 <div class="col-md-6">
