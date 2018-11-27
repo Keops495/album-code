@@ -32,9 +32,6 @@
             <a class="nav-link" href="https://keops-web1.herokuapp.com/Share/messages/<?php echo $user_id; ?>"><i class="fas fa-bell"></i></a>
           </li>
         </ul>
-        <form action="http://localhost/372/Album" method='POST' enctype="multipart/form-data" class="form-inline my-2 my-md-0">
-          <input class="form-control" type="text" placeholder="Search" name="search" aria-describedby="basic-addon1">
-        </form>
       </div>
     </nav>
     </header>
