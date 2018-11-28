@@ -7,7 +7,31 @@
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 <body>
+    <header>
+      <nav class="navbar navbar-expand navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">PhotoAlbum</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
+      <div class="collapse navbar-collapse" id="navbarsExample02">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="https://keops-web1.herokuapp.com/User/logged">Profil <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://keops-web1.herokuapp.com/User/all">Album</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://keops-web1.herokuapp.com/Authentication/out">Logout</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://keops-web1.herokuapp.com/Share/messages/<?php echo $user_id; ?>"><i class="fas fa-bell"></i></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    </header>
 
     <main role="main">
 
@@ -23,7 +47,7 @@
           <div class="row">
             <form action="https://keops-web1.herokuapp.com/User/create_album/<?php echo $user_id; ?>" method='POST' enctype="multipart/form-data" style="text-align: center; margin-left: 42%;">
               <input type="text" name="Name" class="form-control" placeholder="Enter album name" aria-describedby="basic-addon1" required style="margin-left:25%;" >   
-              <input type="submit" name="Sepet" value="Add" class="button" style="padding: 3px 6px; font-size: 15px; margin-left:50%; ">
+              <input type="submit" name="Sepet" value="Add" class="btn" style="padding: 3px 6px; font-size: 15px; margin-left:50%; width: 100%;background-color: coral;color: white;border: 0;">
           </form>
           </div>
         </div>
