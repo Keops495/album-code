@@ -28,7 +28,7 @@ class Api extends CI_Controller {
           $data['photos'][$j]["likes"][$i]['surname'] =$this->Data_model->get_surname($data['photos'][$j]['likes'][$i]['like_user_id'])['surname'];
         }
       }
-      
+      echo json_encode($data);
     }
 
    public function albums(){
