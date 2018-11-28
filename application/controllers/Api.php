@@ -24,7 +24,7 @@ class Api extends CI_Controller {
         $data['photos'][$j]['likes'] = $this->Data_model->get_likes($data["photos"][$j]["photo_id"]);
         $data['photos'][$j]["key"]=$this->User_model->get_key($data["photos"][$j]["photo_id"]);
         for ($i=0; $i < count($data["likes"]) ; $i++) { 
-          $data['photos'][$j]["likes"][$i]['name'] =$this->Data_model->get_name($data['photos'][$j]['likes'][$i]['like_user_id'])['name'];
+          $data['photos'][$j]['photos'][$j]["likes"][$i]['name'] =$this->Data_model->get_name($data['photos'][$j]['likes'][$i]['like_user_id'])['name'];
           $data['photos'][$j]["likes"][$i]['surname'] =$this->Data_model->get_surname($data['photos'][$j]['likes'][$i]['like_user_id'])['surname'];
         }
       }
