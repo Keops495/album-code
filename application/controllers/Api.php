@@ -18,6 +18,7 @@ class Api extends CI_Controller {
   }
     public function all() {
       $this->load->model('Data_model');
+      $this->load->model('User_model');
       $data['photos'] = $this->Data_model->get_all_photosa();
       for ($j=0; $j <count($data['photos']) ; $j++) { 
         $data['photos'][$j]['likes'] = $this->Data_model->get_likes($data["photos"][$j]["photo_id"]);
