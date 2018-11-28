@@ -5,6 +5,8 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 </head>
 <body>
     <header>
@@ -47,7 +49,7 @@
           <div class="row">
             <form action="https://keops-web1.herokuapp.com/User/create_album/<?php echo $user_id; ?>" method='POST' enctype="multipart/form-data" style="text-align: center; margin-left: 42%;">
               <input type="text" name="Name" class="form-control" placeholder="Enter album name" aria-describedby="basic-addon1" required style="margin-left:25%;" >   
-              <input type="submit" name="Sepet" value="Add" class="btn" style="padding: 3px 6px; font-size: 15px; margin-left:50%; width: 100%;background-color: coral;color: white;border: 0;">
+              <input type="submit" name="Sepet" value="Add" class="btn" style="padding: 3px 6px; font-size: 15px; margin-left:25%; width: 100%;background-color: coral;color: white;border: 0;">
           </form>
           </div>
         </div>
