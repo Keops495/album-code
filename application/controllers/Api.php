@@ -38,7 +38,7 @@ class Api extends CI_Controller {
 
     public function signup() {
       $this->load->model('Data_model');
-      $temp = json_decode($_POST);
+      $temp = json_decode(file_get_contents("php://input"), TRUE);
       $this->Data_model->new_user($temp);
     }
 
