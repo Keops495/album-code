@@ -48,11 +48,11 @@
           <div class="row">
             <form action="https://keops-web1.herokuapp.com/User/create_photo/<?php echo $album_id; ?>" method='POST' enctype="multipart/form-data" style="text-align: center; margin-left: 30%;">
               <input type="text" name="Url" class="form-control" placeholder="Enter photo url" aria-describedby="basic-addon1" required style="margin-left: 25%; text-align: center;">
-              <input type="text" name="Key" class="form-control" placeholder="Enter photo key" aria-describedby="basic-addon1" required style="margin-left: 25%; text-align: center;">
+              <input type="text" name="Key" class="form-control" placeholder="Enter photo key" aria-describedby="basic-addon1" required style="margin-left: 25%; text-align: center;">         
+              <input type="submit" name="Sepet" value="Add" class="btn" style="padding: 3px 6px; font-size: 15px; margin-left:25%; width: 100%;background-color: coral;color: white;border: 0;">
               <div class='form-group' style="margin-left: 38%;">
-                <input type="file" style='margin-bottom: 10px;' name="photo" required>
-              </div>                        
-              <input type="submit" name="Sepet" value="Add" class="button" style="padding: 3px 6px; font-size: 15px; margin-left: 50%;">
+                <input type="file" name="photo" required>
+              </div>   
           </form>
           </div>
         </div>

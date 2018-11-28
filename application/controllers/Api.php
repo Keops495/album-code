@@ -42,5 +42,11 @@ class Api extends CI_Controller {
       $this->Data_model->new_user($temp);
     }
 
+    public function add_photo() {
+      $this->load->model('User_model');
+      $temp = json_decode(file_get_contents("php://input"), TRUE);
+      $this->User_model->add_more_photo($temp['albumId'],$temp);
+    }
+
 }
 
