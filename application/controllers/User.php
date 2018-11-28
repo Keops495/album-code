@@ -38,11 +38,11 @@ class User extends CI_Controller {
 		$this->load->view('user_detail',$data);
 	}
 
-	public function all($user_id)
+	public function all()
 	{
 	    $this->load->model('Data_model');
 	    $this->load->model('User_model');
-	    $user_idx = $this->Data_model->get_sessions($user_id);
+	    $user_id = $this->session->userdata['admin']['user_id'];
 	    if($this->input->post()) {
 	    	$temp = $this->input->post()['search'];
 	    	$data["albums"]=$this->Data_model->album_search2($temp,$user_id);
