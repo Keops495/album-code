@@ -60,7 +60,7 @@
               </div>
             </li>
             <?php $counter++; } else { ?>
-            <li class="list-group-item" style="padding: 10px 10px 10px 10px; background-color: azure;">
+            <li class="list-group-item" style="padding: 10px 10px 10px 10px; background-color: lightsteelblue;">
               <div class="row">
                 <div class="col-md-6">
                   <img style="width: 100%;" src="<?php echo $key['message']; ?>">
