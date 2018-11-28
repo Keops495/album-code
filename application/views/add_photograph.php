@@ -50,9 +50,7 @@
               <input type="text" name="Url" class="form-control" placeholder="Enter photo url" aria-describedby="basic-addon1" required style="margin-left: 25%; text-align: center;">
               <input type="text" name="Key" class="form-control" placeholder="Enter photo key" aria-describedby="basic-addon1" required style="margin-left: 25%; text-align: center;">         
               <input type="submit" name="Sepet" value="Add" class="btn" style="padding: 3px 6px; font-size: 15px; margin-left:25%; width: 100%;background-color: coral;color: white;border: 0;">
-              <div class='form-group' style="margin-left: 38%;">
-                <input type="file" name="photo" required>
-              </div>   
+              
           </form>
           </div>
         </div>
