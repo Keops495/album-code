@@ -47,7 +47,7 @@
         <div class="container">
 
           <div class="row">
-            <form action="https://keops-web1.herokuapp.com/User/create_album/<?php echo $user_id; ?>" method='POST' enctype="multipart/form-data" style="text-align: center; margin-left: 42%;">
+            <form action="https://keops-web1.herokuapp.com/User/create_album/<?php echo $user_id; ?>" method='POST' enctype="multipart/form-data" style="text-align: center; margin-left: 37%;">
               <input type="text" name="Name" class="form-control" placeholder="Enter album name" aria-describedby="basic-addon1" required style="margin-left:25%;" >   
               <input type="submit" name="Sepet" value="Add" class="btn" style="padding: 3px 6px; font-size: 15px; margin-left:25%; width: 100%;background-color: coral;color: white;border: 0;">
           </form>
