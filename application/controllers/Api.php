@@ -63,5 +63,11 @@ class Api extends CI_Controller {
       $this->User_model->add_more_album($temp['user_id'],$temp);
     }
 
+    public function update_n() {
+      $this->load->model('Data_model');
+      $temp = json_decode(file_get_contents("php://input"), TRUE);
+      $this->User_model->n_change($temp['user_id'],$temp['n']);
+    }
+
 }
 
