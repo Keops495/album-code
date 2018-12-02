@@ -80,6 +80,7 @@ class Api extends CI_Controller {
           $data[$j]["likes"][$i]['name'] =$this->Data_model->get_name($data[$j]['likes'][$i]['like_user_id'])['name'];
           $data[$j]["likes"][$i]['surname'] =$this->Data_model->get_surname($data[$j]['likes'][$i]['like_user_id'])['surname'];
         }
+      }
       echo json_encode($data);
     }
 
